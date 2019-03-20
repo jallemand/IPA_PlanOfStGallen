@@ -1,12 +1,17 @@
 function Normal2PtClouds(varargin)
 %UNTITLED2 Summary of this function goes here
-%   Detailed explanation goes here
+%   This function takes the following input options:
+%   - Normal2PtClouds(normalFolder, outputFolder)
+%   - Normal2PtClouds(normalFolder, ambientFolder, outputFolder)
+%   - Normal2PtClouds(normalFolder, ambientFolder, outputFolder,
+%   heightmapFolder)
 
 addpath(genpath(cd));
 
 % Define the "constant" distance between pixels
 pixelSpacing = 1;
 if nargin == 2
+    %%
      % Get a list of all the input normal aps
     normalPaths = dir(fullfile(varargin{1}, '*.tif'));
     
@@ -87,7 +92,8 @@ if nargin == 2
         fprintf('===== PROCESSING COMPLETE =====\n\n')
     end
     
-elseif nargin == 3
+elseif nargin >= 3
+    %%
     % Get a list of all the input normal aps
     normalPaths = dir(fullfile(varargin{1}, '*.tif'));
     
@@ -165,17 +171,24 @@ elseif nargin == 3
         else
             error('No files were passed...')
         end
-            
+            numInputs = nargin;
         parfor i = 1:n
             normalPath = normalsList{i};
             ambientPath = ambientPaths{i};
             fprintf('Processing normal and ambient maps %i\n', i)
-            [pCloud, filename] = createPtCloudColour(normalPath, ambientPath, ...
+            [pCloud, filename, Z] = createPtCloudColour(normalPath, ambientPath, ...
                 outputFolder, pixelSpacing);
+            if numInputs == 4
+                % Write image from Z data
+                fprintf(Z);
+            end
             pcwrite(pCloud,filename, 'Encoding', 'binary');
         end
         fprintf('===== PROCESSING COMPLETE =====\n\n')
     end
+    
+elseif nargin == 4
+    %% In the case the heightmap is to be saved
 else
     error(['Too many variables were passed.\nPlease pass only the input'... 
             'folder and output folder'])
