@@ -10,12 +10,9 @@ import cv2
 
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
-ap.add_argument("-i", "--images", type=str, required=True,
-	help="path to input directory of images to stitch")
-ap.add_argument("-o", "--output", type=str, required=True,
-	help="path to the output image")
-ap.add_argument("-c", "--crop", type=int, default=0,
-	help="whether to crop out largest rectangular region")
+ap.add_argument("-i", "--images", type=str, required=True, help="path to input directory of images to stitch")
+ap.add_argument("-o", "--output", type=str, required=True, help="path to the output image")
+ap.add_argument("-c", "--crop", type=int, default=0, help="whether to crop out largest rectangular region")
 args = vars(ap.parse_args())
 
 # grab the paths to the input images and initialize our images list
@@ -33,6 +30,9 @@ for imagePath in imagePaths:
 # stitching
 print("[INFO] stitching images...")
 stitcher = cv2.createStitcher() if imutils.is_cv3() else cv2.Stitcher_create()
+stitcher.mode(1)
+
+
 (status, stitched) = stitcher.stitch(images)
 
 # if the status is '0', then OpenCV successfully performed image
@@ -41,7 +41,7 @@ if status == 0:
 	# check to see if we supposed to crop out the largest rectangular
 	# region from the stitched image
 	if args["crop"] > 0:
-		# create a 10 pixel border surrounding the stitched image
+		# create a 10 pixel bordergit reset --soft HEAD~1 surrounding the stitched image
 		print("[INFO] cropping...")
 		stitched = cv2.copyMakeBorder(stitched, 10, 10, 10, 10,
 			cv2.BORDER_CONSTANT, (0, 0, 0))
@@ -84,8 +84,7 @@ if status == 0:
 
 		# find contours in the minimum rectangular mask and then
 		# extract the bounding box (x, y)-coordinates
-		cnts = cv2.findContours(minRect.copy(), cv2.RETR_EXTERNAL,
-			cv2.CHAIN_APPROX_SIMPLE)
+		cnts = cv2.findContours(minRect.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 		cnts = imutils.grab_contours(cnts)
 		c = max(cnts, key=cv2.contourArea)
 		(x, y, w, h) = cv2.boundingRect(c)
