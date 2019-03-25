@@ -2,174 +2,146 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7af9f4f1-e311-4718-b7cc-83dd5fb23877" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/image-stitching-opencv/planStGallen_Stitcher.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/DOPbox/dop.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/DOPbox/dopApproxLocal.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/DOPbox/dopCheby.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/DOPbox/dopConstrain.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/DOPbox/dopDiffLocal.asv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/DOPbox/dopDiffLocal.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/DOPbox/dopFit.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/DOPbox/dopGenConstrained.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/DOPbox/dopGram.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/DOPbox/dopInterpolate.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/DOPbox/dopNodes.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/DOPbox/dopSine.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/DOPbox/dopVal.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/DOPbox/dopWeightBasis.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/DOPbox/header.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/DOPbox/isEven.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/DOPbox/isOdd.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/DOPbox/rq.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/Documentation/g2sIntro.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/Documentation/g2sIntro.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/grad2Surf/g2s.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/grad2Surf/g2sDirichlet.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/grad2Surf/g2sPlotSurf.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/grad2Surf/g2sSparse.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/grad2Surf/g2sSpectral.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/grad2Surf/g2sSylvester.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/grad2Surf/g2sTestSurf.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/grad2Surf/g2sTikhonov.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/grad2Surf/g2sTikhonovRT.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/grad2Surf/g2sTikhonovRTalpha.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/grad2Surf/g2sTikhonovStd.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/grad2Surf/g2sWeighted.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/grad2Surf/grad2SurfV1-0.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/grad2Surf/grad2SurfV1-0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../00_normal2mesh/surf2stl.m" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/argtesting.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/stitching_tutorial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-stitching-opencv/image_stitching.py" beforeDir="false" afterPath="$PROJECT_DIR$/image-stitching-opencv/image_stitching.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Normal2Mesh.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Normal2PtClouds.asv" beforeDir="false" afterPath="$PROJECT_DIR$/../Normal2PtClouds.asv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Normal2PtClouds.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../createPtCloud.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../createPtCloudColour.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../produceMesh.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPBoxV1-8.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPBoxV1-8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dop.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dop.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopApproxLocal.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopApproxLocal.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopCheby.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopCheby.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopConstrain.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopConstrain.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopDiffLocal.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopDiffLocal.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopFit.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopFit.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopGenConstrained.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopGenConstrained.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopGram.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopGram.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopInterpolate.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopInterpolate.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopNodes.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopNodes.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopSine.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopSine.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopVal.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopVal.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopWeightBasis.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopWeightBasis.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPbox/header.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPbox/header.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPbox/isEven.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPbox/isEven.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPbox/isOdd.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPbox/isOdd.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPbox/rq.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/DOPbox/rq.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/BasisFunctionQuality/CPS.bib" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/BasisFunctionQuality/CPS.bib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/BasisFunctionQuality/gramSchmidt.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/BasisFunctionQuality/gramSchmidt.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/BasisFunctionQuality/gramSchmidt.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/BasisFunctionQuality/gramSchmidt.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/BasisFunctionQuality/myBibliography.bib" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/BasisFunctionQuality/myBibliography.bib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/Examples/BVP1/demoBVP.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/Examples/BVP1/demoBVP.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/Examples/BVP1/demoBVP.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/Examples/BVP1/demoBVP.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/Examples/BVP1/harkeroleary.bib" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/Examples/BVP1/harkeroleary.bib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/Examples/Cheby/demoChebyPolys1.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/Examples/Cheby/demoChebyPolys1.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/Examples/Cheby/demoChebyPolys1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/Examples/Cheby/demoChebyPolys1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/GettingStarted/DOPboxGettingStarted.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/GettingStarted/DOPboxGettingStarted.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/GettingStarted/DOPboxGettingStarted.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/GettingStarted/DOPboxGettingStarted.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/GettingStarted/Figures/cantileverFig.eps" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/GettingStarted/Figures/cantileverFig.eps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/GettingStarted/approxLocalData.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/GettingStarted/approxLocalData.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/GettingStarted/arbitraryData.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/GettingStarted/arbitraryData.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/GettingStarted/dopFitData.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/GettingStarted/dopFitData.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/GettingStarted/harkeroleary.bib" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/GettingStarted/harkeroleary.bib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/GettingStarted/interpolateData.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/GettingStarted/interpolateData.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/ConstrainedPolys.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/ConstrainedPolys.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/SturmLiouville1.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/SturmLiouville1.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/constrainedData.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/constrainedData.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/demo2DopGenConstrained.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/demo2DopGenConstrained.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/demo3DopGenConstrained.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/demo3DopGenConstrained.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/demo4DopGenConstrained.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/demo4DopGenConstrained.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/ConstrainedPolys.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/ConstrainedPolys.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/ConstrainedPolys.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/ConstrainedPolys.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/ConstrainedPolys_01.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/ConstrainedPolys_01.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/ConstrainedPolys_02.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/ConstrainedPolys_02.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/ConstrainedPolys_03.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/ConstrainedPolys_03.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/ConstrainedPolys_04.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/ConstrainedPolys_04.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/ConstrainedPolys_05.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/ConstrainedPolys_05.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/ConstrainedPolys_06.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/ConstrainedPolys_06.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/ConstrainedPolys_07.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/ConstrainedPolys_07.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/ConstrainedPolys_eq61559.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/ConstrainedPolys_eq61559.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/SturmLiouville1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/SturmLiouville1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/SturmLiouville1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/SturmLiouville1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/SturmLiouville1_01.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/SturmLiouville1_01.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/SturmLiouville1_02.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/SturmLiouville1_02.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/SturmLiouville1_eq61229.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/SturmLiouville1_eq61229.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/SturmLiouville1_eq72217.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/SturmLiouville1_eq72217.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo2DopGenConstrained.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo2DopGenConstrained.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo2DopGenConstrained.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo2DopGenConstrained.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo2DopGenConstrained_01.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo2DopGenConstrained_01.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo2DopGenConstrained_02.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo2DopGenConstrained_02.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo2DopGenConstrained_03.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo2DopGenConstrained_03.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo2DopGenConstrained_04.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo2DopGenConstrained_04.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo3DopGenConstrained.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo3DopGenConstrained.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo3DopGenConstrained.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo3DopGenConstrained.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo3DopGenConstrained_01.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo3DopGenConstrained_01.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo3DopGenConstrained_02.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo3DopGenConstrained_02.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo3DopGenConstrained_03.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo3DopGenConstrained_03.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo4DopGenConstrained.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo4DopGenConstrained.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo4DopGenConstrained.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo4DopGenConstrained.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo4DopGenConstrained_01.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo4DopGenConstrained_01.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo4DopGenConstrained_02.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo4DopGenConstrained_02.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo4DopGenConstrained_03.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo4DopGenConstrained_03.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo4DopGenConstrained_04.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo4DopGenConstrained_04.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/SupportFns/circulant.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/SupportFns/circulant.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/SupportFns/epscombine.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/SupportFns/epscombine.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/SupportFns/expand2bandMatrix.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/SupportFns/expand2bandMatrix.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/SupportFns/figure2eps.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/SupportFns/figure2eps.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/SupportFns/matrix2latex.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/SupportFns/matrix2latex.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/SupportFns/poly2latex.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/SupportFns/poly2latex.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/SupportFns/printFigure.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/SupportFns/printFigure.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/SupportFns/publishFigureFormat.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/SupportFns/publishFigureFormat.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/SupportFns/setUpGraphics.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/SupportFns/setUpGraphics.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/SupportFns/writeStringCells2file.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/SupportFns/writeStringCells2file.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/readMeV1-8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/DOPBoxV1-8/readMeV1-8.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/license.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/DOPBoxV1-8/license.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dop.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dop.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopApproxLocal.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopApproxLocal.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopCheby.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopCheby.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopConstrain.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopConstrain.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopDiffLocal.asv" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopDiffLocal.asv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopDiffLocal.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopDiffLocal.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopFit.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopFit.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopGenConstrained.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopGenConstrained.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopGram.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopGram.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopInterpolate.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopInterpolate.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopNodes.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopNodes.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopSine.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopSine.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopVal.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopVal.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopWeightBasis.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopWeightBasis.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/header.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/header.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/isEven.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/isEven.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/isOdd.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/isOdd.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/rq.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/DOPbox/rq.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/Documentation/g2sIntro.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/Documentation/g2sIntro.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/Documentation/g2sIntro.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/Documentation/g2sIntro.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/colour_STL_faces.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/colour_STL_faces.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2s.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2s.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2sDirichlet.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2sDirichlet.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2sPlotSurf.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2sPlotSurf.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2sSparse.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2sSparse.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2sSpectral.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2sSpectral.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2sSylvester.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2sSylvester.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2sTestSurf.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2sTestSurf.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2sTikhonov.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2sTikhonov.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2sTikhonovRT.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2sTikhonovRT.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2sTikhonovRTalpha.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2sTikhonovRTalpha.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2sTikhonovStd.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2sTikhonovStd.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2sWeighted.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2sWeighted.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/grad2SurfV1-0.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/grad2SurfV1-0.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/grad2SurfV1-0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/grad2SurfV1-0/grad2SurfV1-0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/license.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/grad2SurfV1_0/license.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/stlwrite.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/stlwrite.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02_Dependencies/surf2stl/surf2stl.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_Dependencies/surf2stl/surf2stl.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image-stitching-opencv/image_stitching.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image-stitching-opencv/image_stitching_simple.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image-stitching-opencv/images/scottsdale/IMG_1786-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image-stitching-opencv/images/scottsdale/IMG_1787-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image-stitching-opencv/images/scottsdale/IMG_1788-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image-stitching-opencv/output.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image-stitching-opencv/planStGallen_Stitcher.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testMosaicOpenCV.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01_NormalsTo3D/Normal2Mesh.m" beforeDir="false" afterPath="$PROJECT_DIR$/../01_NormalsTo3D/Normal2Mesh.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01_NormalsTo3D/Normal2PtClouds.asv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01_NormalsTo3D/Normal2PtClouds.m" beforeDir="false" afterPath="$PROJECT_DIR$/../01_NormalsTo3D/Normal2PtClouds.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01_NormalsTo3D/createPtCloud.m" beforeDir="false" afterPath="$PROJECT_DIR$/../01_NormalsTo3D/createPtCloud.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01_NormalsTo3D/createPtCloudColour.m" beforeDir="false" afterPath="$PROJECT_DIR$/../01_NormalsTo3D/createPtCloudColour.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/DOPBoxV1-8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dop.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopApproxLocal.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopCheby.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopConstrain.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopDiffLocal.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopFit.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopGenConstrained.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopGram.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopInterpolate.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopNodes.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopSine.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopVal.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/DOPbox/dopWeightBasis.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/DOPbox/header.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/DOPbox/isEven.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/DOPbox/isOdd.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/DOPbox/rq.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/BasisFunctionQuality/CPS.bib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/BasisFunctionQuality/gramSchmidt.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/BasisFunctionQuality/gramSchmidt.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/BasisFunctionQuality/myBibliography.bib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/Examples/BVP1/demoBVP.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/Examples/BVP1/demoBVP.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/Examples/BVP1/harkeroleary.bib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/Examples/Cheby/demoChebyPolys1.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/Examples/Cheby/demoChebyPolys1.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/GettingStarted/DOPboxGettingStarted.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/GettingStarted/DOPboxGettingStarted.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/GettingStarted/Figures/cantileverFig.eps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/GettingStarted/approxLocalData.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/GettingStarted/arbitraryData.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/GettingStarted/dopFitData.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/GettingStarted/harkeroleary.bib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/GettingStarted/interpolateData.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/ConstrainedPolys.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/SturmLiouville1.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/constrainedData.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/demo2DopGenConstrained.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/demo3DopGenConstrained.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/demo4DopGenConstrained.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/ConstrainedPolys.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/ConstrainedPolys.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/ConstrainedPolys_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/ConstrainedPolys_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/ConstrainedPolys_03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/ConstrainedPolys_04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/ConstrainedPolys_05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/ConstrainedPolys_06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/ConstrainedPolys_07.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/ConstrainedPolys_eq61559.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/SturmLiouville1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/SturmLiouville1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/SturmLiouville1_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/SturmLiouville1_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/SturmLiouville1_eq61229.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/SturmLiouville1_eq72217.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo2DopGenConstrained.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo2DopGenConstrained.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo2DopGenConstrained_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo2DopGenConstrained_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo2DopGenConstrained_03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo2DopGenConstrained_04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo3DopGenConstrained.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo3DopGenConstrained.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo3DopGenConstrained_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo3DopGenConstrained_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo3DopGenConstrained_03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo4DopGenConstrained.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo4DopGenConstrained.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo4DopGenConstrained_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo4DopGenConstrained_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo4DopGenConstrained_03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/Documentation/dopGenConstrained/html/demo4DopGenConstrained_04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/SupportFns/circulant.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/SupportFns/epscombine.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/SupportFns/expand2bandMatrix.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/SupportFns/figure2eps.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/SupportFns/matrix2latex.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/SupportFns/poly2latex.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/SupportFns/printFigure.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/SupportFns/publishFigureFormat.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/SupportFns/setUpGraphics.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/SupportFns/writeStringCells2file.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/DOPBoxV1-8/readMeV1-8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/DOPBoxV1-8/license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dop.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopApproxLocal.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopCheby.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopConstrain.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopDiffLocal.asv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopDiffLocal.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopFit.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopGenConstrained.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopGram.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopInterpolate.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopNodes.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopSine.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopVal.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/DOPbox/dopWeightBasis.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/DOPbox/header.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/DOPbox/isEven.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/DOPbox/isOdd.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/DOPbox/rq.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/Documentation/g2sIntro.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/Documentation/g2sIntro.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/colour_STL_faces.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2s.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2sDirichlet.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2sPlotSurf.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2sSparse.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2sSpectral.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2sSylvester.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2sTestSurf.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2sTikhonov.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2sTikhonovRT.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2sTikhonovRTalpha.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2sTikhonovStd.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/grad2Surf/g2sWeighted.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/grad2SurfV1-0.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/grad2SurfV1-0/grad2SurfV1-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/grad2SurfV1_0/license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_Dependencies/00_Mathworks/stlwrite.m" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -177,13 +149,16 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/00_OpenCV_Stitching$planStGallen_Stitcher.coverage" NAME="planStGallen_Stitcher Coverage Results" MODIFIED="1553271592551" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testMosaicOpenCV.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/planStGallen_Stitcher.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="480">
+              <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -192,20 +167,33 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/image-stitching-opencv/image_stitching.py">
+        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="617">
-              <caret line="44" column="35" lean-forward="true" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
-              <folding>
-                <element signature="e#125#150#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="924">
+              <caret line="1740" selection-start-line="1740" selection-end-line="1740" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/image-stitching-opencv/image_stitching_simple.py">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/os.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="344">
+              <caret line="351" selection-start-line="351" selection-end-line="351" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/argtesting.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="566">
+              <caret line="63" column="46" lean-forward="true" selection-start-line="63" selection-start-column="46" selection-end-line="63" selection-end-column="46" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -217,19 +205,27 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>import</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/testMosaicOpenCV.py" />
         <option value="$PROJECT_DIR$/image-stitching-opencv/image_stitching.py" />
         <option value="$PROJECT_DIR$/image-stitching-opencv/planStGallen_Stitcher.py" />
+        <option value="$PROJECT_DIR$/testMosaicOpenCV.py" />
+        <option value="$PROJECT_DIR$/images/stitching_tutorial.py" />
+        <option value="$PROJECT_DIR$/argtesting.py" />
+        <option value="$PROJECT_DIR$/planStGallen_Stitcher.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-1088" />
     <option name="y" value="-672" />
     <option name="width" value="1096" />
@@ -251,7 +247,7 @@
             <path>
               <item name="00_OpenCV_Stitching" type="b2602c69:ProjectViewProjectNode" />
               <item name="00_OpenCV_Stitching" type="462c0819:PsiDirectoryNode" />
-              <item name="image-stitching-opencv" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -265,7 +261,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -278,6 +274,35 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="planStGallen_Stitcher" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="00_OpenCV_Stitching" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/planStGallen_Stitcher.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.planStGallen_Stitcher" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -293,22 +318,27 @@
       <workItem from="1552835353979" duration="3193000" />
       <workItem from="1553157671254" duration="1010000" />
       <workItem from="1553164305808" duration="4609000" />
+      <workItem from="1553180939631" duration="16860000" />
+      <workItem from="1553245987185" duration="600000" />
+      <workItem from="1553253496814" duration="813000" />
+      <workItem from="1553254430803" duration="7846000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9698000" />
+    <option name="totallyTimeSpent" value="35817000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1088" y="-672" width="1096" height="1936" extended-state="6" />
+    <frame x="-1088" y="-672" width="1096" height="1936" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26833978" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25096524" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39988908" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -316,7 +346,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="11" visible="true" weight="0.3294509" />
+      <window_info anchor="bottom" id="Python Console" order="11" weight="0.4731004" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.3294509" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -328,32 +358,101 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>cv2.xfeatures2d.SURF_create()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>cv2.xfeatures2d.SIFT_create()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>help(cv2)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>import module
+&gt;&gt;&gt; help(module)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>cv2.features2d_SURF.create()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/testMosaicOpenCV.py">
+    <entry file="file://$PROJECT_DIR$/image-stitching-opencv/image_stitching.py" />
+    <entry file="file://$PROJECT_DIR$/image-stitching-opencv/planStGallen_Stitcher.py" />
+    <entry file="file://$PROJECT_DIR$/image-stitching-opencv/image_stitching_simple.py" />
+    <entry file="file://$PROJECT_DIR$/testMosaicOpenCV.py" />
+    <entry file="file://$PROJECT_DIR$/images/stitching_tutorial.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="221">
+          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
           <folding>
-            <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#3088#3106#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/image-stitching-opencv/image_stitching.py">
+    <entry file="file://$PROJECT_DIR$/image_stitching.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="617">
-          <caret line="44" column="35" lean-forward="true" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
+        <state relative-caret-position="289">
+          <caret line="20" selection-start-line="20" selection-end-line="20" selection-end-column="11" />
           <folding>
             <element signature="e#125#150#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/image-stitching-opencv/planStGallen_Stitcher.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_bundle/pydev_import_hook.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/image-stitching-opencv/image_stitching_simple.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/argtesting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="63" column="46" lean-forward="true" selection-start-line="63" selection-start-column="46" selection-end-line="63" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/os.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="351" selection-start-line="351" selection-end-line="351" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="924">
+          <caret line="1740" selection-start-line="1740" selection-end-line="1740" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/planStGallen_Stitcher.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

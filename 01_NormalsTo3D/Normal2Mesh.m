@@ -2,6 +2,8 @@ function Normal2Mesh(varargin)
 %UNTITLED2 Summary of this function goes here
 %   Detailed explanation goes here
 
+addpath(genpath('../02_MatlabDependencies'))
+
 % Define the "constant" distance between pixels
 pixelSpacing = 1;
 

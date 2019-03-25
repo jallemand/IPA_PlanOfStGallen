@@ -6,7 +6,7 @@ function Normal2PtClouds(varargin)
 %   - Normal2PtClouds(normalFolder, ambientFolder, outputFolder,
 %   heightmapFolder)
 
-addpath(genpath(cd));
+addpath(genpath('../02_MatlabDependencies'))
 
 % Define the "constant" distance between pixels
 pixelSpacing = 1;
@@ -102,8 +102,6 @@ elseif nargin >= 3
     
     % Define the output folder variable
     outputFolder = varargin{3};
-    
-    
 
     % Set variable associated with number of images
     n = size(normalPaths,1);
@@ -160,10 +158,14 @@ elseif nargin >= 3
             normalPath = normalsList{1};
             ambientPath = ambientPaths{1};
             fprintf('Processing normal and ambient maps %i\n', 1)
-            [pCloud, filename] = createPtCloudColour(normalPath, ambientPath, ...
-                outputFolder, pixelSpacing);
+            [pCloud, filename, Z] = createPtCloudColour(normalPath, ambientPath, ...
+                outputFolder, pixelSpacing, normFlag);
             pcwrite(pCloud,filename, 'Encoding', 'binary');
-
+            if numInputs == 4
+                % Write image from Z data
+                fprintf(Z);
+            end
+            
         elseif n >= c
             parpool(num_cores)
         elseif n > 1
@@ -177,12 +179,12 @@ elseif nargin >= 3
             ambientPath = ambientPaths{i};
             fprintf('Processing normal and ambient maps %i\n', i)
             [pCloud, filename, Z] = createPtCloudColour(normalPath, ambientPath, ...
-                outputFolder, pixelSpacing);
+                outputFolder, pixelSpacing, normFlag);
             if numInputs == 4
                 % Write image from Z data
                 fprintf(Z);
             end
-            pcwrite(pCloud,filename, 'Encoding', 'binary');
+            pcwrite(pCloud, filename, 'Encoding', 'binary');
         end
         fprintf('===== PROCESSING COMPLETE =====\n\n')
     end

@@ -1,5 +1,5 @@
 function [pCloud, filename, Z] = createPtCloudColour(normalPath, ambientPath, outputFolder, ...
-                            pixelSpacing)
+                            pixelSpacing, normFlag)
 
 % Read in image
     [~,name,~] = fileparts(normalPath);
@@ -38,5 +38,16 @@ function [pCloud, filename, Z] = createPtCloudColour(normalPath, ambientPath, ou
     b = imAmb(:,:,3);
     rgb = [r(:), g(:), b(:)];
     
-    pCloud = pointCloud(pts, 'Color', rgb);
+    if normFlag
+        norm_x = imNorm(:,:,1);
+        norm_y = imNorm(:,:,2);
+        norm_z = imNorm(:,:,3);
+        norm = [norm_x(:), norm_y(:), norm_z(:)];
+        pCloud = pointCloud(pts, 'Color', rgb, 'Normal', norm);
+    else
+        pCloud = pointCloud(pts, 'Color', rgb);
+    end
+    
+    
+    
 end

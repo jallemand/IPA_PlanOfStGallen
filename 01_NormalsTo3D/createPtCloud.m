@@ -1,5 +1,5 @@
 function [pCloud, filename, Z] = createPtCloud(normalPath, outputFolder, ...
-                            pixelSpacing)
+                            pixelSpacing, normFlag)
 
 % Read in image
     [~,name,~] = fileparts(normalPath);
@@ -23,10 +23,14 @@ function [pCloud, filename, Z] = createPtCloud(normalPath, outputFolder, ...
     % Generate the heightmap from integration of the normals
     Z = g2s(double(imNorm(:,:,1))/255, double(imNorm(:,:,2))/255, x', y' );
 
-
+    % Convert from location in matrix to tuple cartesian coordinates
     [I, J] = ind2sub([height,width], 1:(height*width));
     pts = [(I'.* pixelSpacing), (J'.* pixelSpacing), (Z(:))];
     
+    % As the heights came out on some kind of angle from the algorithm
+    % used, this has to be fit, thus a plane function is fitted to the data
+    % and the resulting height output corresponds to the difference to the
+    % plane.
     B = [ones(width*height,1), pts(:,1:2)] \ pts(:,3);
     temp_z = pts(:,3) - B(1) - (B(2).* pts(:,1)) - (B(3) .* pts(:,2));
     pts(:,3) = temp_z .* pixelSpacing;
