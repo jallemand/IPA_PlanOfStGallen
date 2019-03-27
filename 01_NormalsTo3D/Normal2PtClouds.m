@@ -7,9 +7,12 @@ function Normal2PtClouds(varargin)
 %   heightmapFolder)
 
 addpath(genpath('../02_MatlabDependencies'))
-
 % Define the "constant" distance between pixels
 pixelSpacing = 1;
+
+heightMapFlag = true;
+normFlag = false;
+
 if nargin == 2
     %%
      % Get a list of all the input normal aps
@@ -59,6 +62,14 @@ if nargin == 2
                     ' (y/n)?'], 's'));
         end
     end
+    
+    if heightMapFlag
+        outHeightDir = [outputFolder, '\Heightmaps\'];
+        if 7 ~= exist(outHeightDir,'dir')
+           mkdir(outHeightDir)
+        end
+    end
+    
        
     if breakFlag
         fprintf('Processing Terminated.')
@@ -69,7 +80,7 @@ if nargin == 2
             normalPath = normalsList{1};
             fprintf('Processing normal maps %i\n', 1)
             [pCloud, filename] = createPtCloud( ...
-                normalPath, outputFolder, pixelSpacing);
+                normalPath, outputFolder, pixelSpacing, heightMapFlag);
             pcwrite(pCloud,filename, 'Encoding', 'binary');
 
         elseif n >= c
@@ -85,14 +96,14 @@ if nargin == 2
             normalPath = normalsList{i};
             fprintf('Processing normal maps %i\n', i)
             [pCloud, filename] = createPtCloud( ...
-                normalPath, outputFolder, pixelSpacing);
+                normalPath, outputFolder, pixelSpacing, heightMapFlag);
             pcwrite(pCloud,filename, 'Encoding', 'binary');
         end
             
         fprintf('===== PROCESSING COMPLETE =====\n\n')
     end
     
-elseif nargin >= 3
+elseif nargin == 3
     %%
     % Get a list of all the input normal aps
     normalPaths = dir(fullfile(varargin{1}, '*.tif'));
@@ -150,7 +161,7 @@ elseif nargin >= 3
     end
        
     if breakFlag
-        fprintf('Processing Terminated.')
+        fprintf('Processing Terminated.\n\n')
     else
         c = parcluster('local');
         num_cores = c.NumWorkers;
@@ -161,36 +172,56 @@ elseif nargin >= 3
             [pCloud, filename, Z] = createPtCloudColour(normalPath, ambientPath, ...
                 outputFolder, pixelSpacing, normFlag);
             pcwrite(pCloud,filename, 'Encoding', 'binary');
-            if numInputs == 4
+            if heightMapFlag
+                fprintf('Processing heightmap %i... \n', i);
+                % Get file name
+                [~,name,~] = fileparts(normalPath);
+                file_heightmap = [outputFolder, '\Heightmaps\', name, '.png'];
+                Z_norm = (Z - min(Z(:))) * 100;
+                Z_out = uint16(Z_norm);
+                
                 % Write image from Z data
-                fprintf(Z);
+                imwrite(Z_out, file_heightmap, 'BitDepth', 16);
             end
             
         elseif n >= c
-            parpool(num_cores)
+            parpool(num_cores);
         elseif n > 1
-            parpool(n)
+            parpool(num_cores);
         else
             error('No files were passed...')
         end
-            numInputs = nargin;
+        
+        if heightMapFlag
+            outHeightDir = [outputFolder, '\Heightmaps\'];
+            if 7 ~= exist(outHeightDir,'dir')
+               mkdir(outHeightDir)
+            end
+        end
+        
         parfor i = 1:n
             normalPath = normalsList{i};
             ambientPath = ambientPaths{i};
             fprintf('Processing normal and ambient maps %i\n', i)
+            
             [pCloud, filename, Z] = createPtCloudColour(normalPath, ambientPath, ...
                 outputFolder, pixelSpacing, normFlag);
-            if numInputs == 4
+            
+            if heightMapFlag
+                fprintf('Processing heightmap %i... \n', i);
+                % Get file name
+                [~,name,~] = fileparts(normalPath);
+                file_heightmap = [outHeightDir, name, '.png'];
+                
+                
                 % Write image from Z data
-                fprintf(Z);
+                imwrite(Z_out, file_heightmap, 'BitDepth', 16);
             end
-            pcwrite(pCloud, filename, 'Encoding', 'binary');
+%             pcwrite(pCloud, filename, 'Encoding', 'binary');
         end
         fprintf('===== PROCESSING COMPLETE =====\n\n')
     end
     
-elseif nargin == 4
-    %% In the case the heightmap is to be saved
 else
     error(['Too many variables were passed.\nPlease pass only the input'... 
             'folder and output folder'])

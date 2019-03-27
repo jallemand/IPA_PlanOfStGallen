@@ -35,5 +35,15 @@ function [pCloud, filename, Z] = createPtCloud(normalPath, outputFolder, ...
     temp_z = pts(:,3) - B(1) - (B(2).* pts(:,1)) - (B(3) .* pts(:,2));
     pts(:,3) = temp_z .* pixelSpacing;
     
-    pCloud = pointCloud(pts);
+    if normFlag
+        norm_x = imNorm(:,:,1);
+        norm_y = imNorm(:,:,2);
+        norm_z = imNorm(:,:,3);
+        norm = [norm_x(:), norm_y(:), norm_z(:)];
+        pCloud = pointCloud(pts, 'Normal', norm);
+    else
+        pCloud = pointCloud(pts);
+    end
+    
+    Z = reshape(pts(:,3), height, width);
 end
