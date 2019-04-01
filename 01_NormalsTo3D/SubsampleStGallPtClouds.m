@@ -24,7 +24,7 @@ parfor i = 1:num
     tempCloud = pcread(ptCloudPaths{i});
     
     % Downsample point cloud
-    outCloud = pcdownsample(tempCloud, 'random', 0.25);
+    outCloud = pcdownsample(tempCloud, 'random', 0.06);
 
     % Write new point cloud
     pcwrite(outCloud, ptCloudName, 'Encoding', 'binary');

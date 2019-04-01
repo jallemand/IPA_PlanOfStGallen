@@ -123,7 +123,7 @@ parfor i = 1:n_norms
                 ptCloudNormals, ptCloudColours)
             pcwrite(pCloud, ptCloudName, 'Encoding', 'binary');
             
-            outCloud = pcdownsample(pCloud, 'random', 0.25);
+            outCloud = pcdownsample(pCloud, 'random', 0.1);
             
             [~, name, ~] = fileparts(ptCloudPaths{i});
             ptCloudName = [outSubPointDir, '\', name, '.ply'];
@@ -140,7 +140,7 @@ parfor i = 1:n_norms
     [~, name, ~] = fileparts(normalPath);
 
     if createHeightMap
-        Z = out_Z{i} - minZ(i);
+        Z = out_Z{i} - min(minZ(i));
         Z = uint16(Z * floor(2^16 / maxZ(i)));
         file_heightmap = [outHeightDir, name, '.png'];
         imwrite(Z, file_heightmap, 'BitDepth', 16);
