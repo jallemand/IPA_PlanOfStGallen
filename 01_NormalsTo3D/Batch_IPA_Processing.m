@@ -3,13 +3,14 @@
 addpath(genpath('../02_MatlabDependencies'));
 
 % Define input directories
-normalFolder = 'D:\00_Allemand_IPA\00_Data\02_FinalOutput\01_Front\00_WhiteLight\00_NormalMap';
-ambientFolder = 'D:\00_Allemand_IPA\00_Data\02_FinalOutput\01_Front\00_WhiteLight\02_Ambient';
+normalFolder = 'D:\00_Allemand_IPA\00_Data\02_FinalOutput\02_Back\00_WhiteLight\00_NormalMaps';
+ambientFolder = 'D:\00_Allemand_IPA\00_Data\02_FinalOutput\02_Back\00_WhiteLight\02_Ambient';
 
 % Define output directories
-outputFolder = 'D:\00_Allemand_IPA\00_Data\02_FinalOutput\01_Front\00_WhiteLight';
-outHeightDir = '';
-outPointDir = '';
+outputFolder = 'D:\00_Allemand_IPA\00_Data\02_FinalOutput\02_Back\00_WhiteLight';
+outHeightDir = 'D:\00_Allemand_IPA\00_Data\02_FinalOutput\02_Back\00_WhiteLight\04_Heightmaps';
+outFullPointDir = 'D:\00_Allemand_IPA\00_Data\02_FinalOutput\02_Back\00_WhiteLight\03_PointClouds\Full_Resolution';
+outSubPointDir = 'D:\00_Allemand_IPA\00_Data\02_FinalOutput\02_Back\00_WhiteLight\03_PointClouds\Subsampled\Raw';
 % Spacing between pixels
 pixelSpacing = 1;
 
@@ -67,14 +68,14 @@ if createHeightMap
 end
 
 if createPtCloud
-    if strcmp(outPointDir,"")
-        outPointDir = [outputFolder, '\03_PointClouds\'];
-        if 7 ~= exist(outPointDir,'dir')
-           mkdir(outPointDir)
+    if strcmp(outFullPointDir,"")
+        outFullPointDir = [outputFolder, '\03_PointClouds\'];
+        if 7 ~= exist(outFullPointDir,'dir')
+           mkdir(outFullPointDir)
         end
     else
-        if 7 ~= exist(outPointDir,'dir')
-           mkdir(outPointDir)
+        if 7 ~= exist(outFullPointDir,'dir')
+           mkdir(outFullPointDir)
         end
     end
 end
@@ -116,11 +117,17 @@ parfor i = 1:n_norms
 
         if createPtCloud
             fprintf('Creating point cloud for image %i ... \n', i);
-            ptCloudName = [outPointDir, '\', name, '.ply'];
+            ptCloudName = [outFullPointDir, '\', name, '.ply'];
 
             [pCloud] = createPtCloud_IPA(xyz, imNorm, imAmb, ...
                 ptCloudNormals, ptCloudColours)
             pcwrite(pCloud, ptCloudName, 'Encoding', 'binary');
+            
+            outCloud = pcdownsample(pCloud, 'random', 0.25);
+            
+            [~, name, ~] = fileparts(ptCloudPaths{i});
+            ptCloudName = [outSubPointDir, '\', name, '.ply'];
+            pcwrite(outCloud, ptCloudName, 'Encoding', 'binary');
         end
 
     end
@@ -141,3 +148,13 @@ parfor i = 1:n_norms
 end
 fprintf('===== FINISHED CREATING HEIGHT MAPS =====\n')
 fprintf('========== PROCESSING COMPLETE ==========\n\n')
+
+
+% Get a list of all point clouds
+ptCloudFiles = dir(fullfile(fullPtCloudDir, '*.ply'));
+ptCloudPaths = [];
+% Get the number of point clouds
+num = size(ptCloudFiles,1);
+
+
+
