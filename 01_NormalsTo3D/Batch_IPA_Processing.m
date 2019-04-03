@@ -148,13 +148,3 @@ parfor i = 1:n_norms
 end
 fprintf('===== FINISHED CREATING HEIGHT MAPS =====\n')
 fprintf('========== PROCESSING COMPLETE ==========\n\n')
-
-
-% Get a list of all point clouds
-ptCloudFiles = dir(fullfile(fullPtCloudDir, '*.ply'));
-ptCloudPaths = [];
-% Get the number of point clouds
-num = size(ptCloudFiles,1);
-
-
-
