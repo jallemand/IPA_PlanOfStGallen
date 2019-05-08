@@ -1,0 +1,8 @@
+features class:
+    -   Each index in this represents the set of features and the image from which they come from. Also gives the image
+        size from which they come
+    -   This is generated from the finder class by passing an image through it
+        -   The finder class can have some of its detection parameters changed
+    -   .getKeypoints() gets a list of the keypoints locations, angles etc.
+
+images
