@@ -179,8 +179,8 @@ function imStats = computeImageStats(X, Y, Z)
     imStats.stdZ = std(Z);
     
     [imStats.histX, ~] = imhist(X);
-    [imStats.histY, ~] = imhist(Y);
-    [imStats.histZ, ~] = imhist(Z);
+    [imStats.histX, ~] = imhist(Y);
+    [imStats.histX, ~] = imhist(X);
 
     imStats.magnitudes = sqrt((X + Y + Z).^2);
     imStats.pixels = length(X);
@@ -203,4 +203,5 @@ function writeHeader(fid, normFlag)
                 'RMSE Z', 'Pixels');
         fprintf(fid, ['-------|', repmat('--------|', 1, 12), '---------\n']);
     end
+
 end
