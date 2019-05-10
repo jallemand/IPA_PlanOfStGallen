@@ -36,13 +36,19 @@ function compareHuginProjectResults(baseFolder)
         outputFolders{i} = cell(2,1);
         
         % Read in the mosiac
+        fprintf('Reading mosaic:  %s\n', mosaicPaths{i});
         mosaic = imread(mosaicPaths{i});
         mosaic = mosaic(:,:,1:3);
 
         for j = 1:2
+            fprintf(' - Processing %s layers\n', layerTypes{j});
+            fprintf(' - Current temp: \n');
+            temp
             outputFolders{i}{j} = fullfile(outputFolder, [sprintf('%s_',temp{4:end-1}),temp{end}], layerTypes{j});
             if ~exist(outputFolders{i}{j}, 'dir')
                mkdir(outputFolders{i}{j});
+            else
+                delete(fullfile(outputFolders{i}{j}, outputFileName));
             end
                 
             % pass through the correct set of layers being processed
@@ -87,7 +93,8 @@ function compareHuginProjectResults(baseFolder)
             end
             
             % Get indices for min and max values in the layer (4th channel)
-            [fid, ~] = fopen(fullfile(outputFolders{i}{j}, outputFileName), 'w');
+            outfile = fullfile(outputFolders{i}{j}, outputFileName);
+            [fid, ~] = fopen(outfile, 'w');
             if fid == -1
                 error('Cannot open file for writing: %s', msg);
             end
@@ -95,9 +102,13 @@ function compareHuginProjectResults(baseFolder)
             
             T = dir(fullfile(outputFolders{i}{j}, '*.txt'));
             for thisInd = numel(T):-1:1
-               files{ind_} = fullfile(T(ind_).folder, T(ind_).name);
+                tempFile = fullfile(T(thisInd).folder, T(thisInd).name);
+                if ~strcmp(tempFile, outfile)
+                    files{thisInd} = tempFile;
+                end
             end
             
+            numberOfFiles = length(files);
             for k = 1:numberOfFiles
                 fprintf(fid, '%s\n', fileread(files{k}));
                 delete(files{k});
@@ -190,17 +201,17 @@ function fileNames = getFileNameOrder(whiteFlag)
         for i = 1:6
             if i < 3
                 for j = 1:10
-                    fileNames{count} = [letters{i}, char(string(j-1))];
+                    fileNames{count} = sprintf('%1c%02d', letters{i}, j-1);
                     count = count + 1;
                 end
             elseif i == 3
                 for j = 0:10
-                    fileNames{count} = [letters{i}, char(string(j))];
+                    fileNames{count} = sprintf('%1c%02d', letters{i}, j);
                     count = count + 1;
                 end
             elseif i > 3
                 for j = 1:10
-                    fileNames{count} = [letters{i}, char(string(j))];
+                    fileNames{count} = sprintf('%1c%02d', letters{i}, j);
                     count = count + 1;
                 end
             end
