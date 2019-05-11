@@ -1,6 +1,6 @@
 
 var mosaicTypes = ["NoGeometricCorrection", "GeometricCorrection", "Reposition"];
-var outputTypes = ["00_Overlap_Images"], 
+var outputTypes = ["00_Overlap_Images"];
 
 var processingFolder = new Folder("C:/scratch/00_AllemandIPA/02_ProcessingOutput");
 var tempPath = new File("E:/Scratch/temp/temp.psb"); 
