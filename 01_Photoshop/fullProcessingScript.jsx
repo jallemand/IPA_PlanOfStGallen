@@ -1,9 +1,9 @@
 
 var mosaicTypes = ["NoGeometricCorrection", "GeometricCorrection", "Reposition"];
-var outputTypes = ["00_Overlap_Images"];
+var outputTypes = ["00_Full_Images", "01_Full_Masks", "02_Overlap_Images", "03_Overlap_Masks", "04_Center_Images", "05_Center_Masks"];
 
 var processingFolder = new Folder("C:/scratch/00_AllemandIPA/02_ProcessingOutput");
-var tempPath = new File("E:/Scratch/temp/temp.psb"); 
+var tempPath = new File("C:/scratch/00_AllemandIPA/04_Temp/temp.psb"); 
 var allFiles = processingFolder.getFiles();
 var foldersToProcess = getStitchingFolders(allFiles);
 var OUTPUT_FORMAT_TYPE;
@@ -14,6 +14,7 @@ var doc;
 
 for (var i = 0; i < foldersToProcess.length; i++) {
 	var psbFiles = [];
+	var tifFiles = [];
 	
 	psbFiles = getPsbFiles(foldersToProcess[i]);
 	
@@ -21,18 +22,24 @@ for (var i = 0; i < foldersToProcess.length; i++) {
 		openFile(psbFiles[j]);
 		basePath = app.activeDocument.path;
 
-		for (var k = 0; k < 1; k++) {
+		for (var k = 2; k < 4; k++) {
 			app.activeDocument.duplicate();
 			app.activeDocument = app.documents[1];
 			savePSB(tempPath);
 			
 			doc = app.activeDocument;
-
-			createInvertMasks();
-			OUTPUT_FORMAT_TYPE = "PNG-24";
-			TRIM_FLAG = false;
-			break;
-
+			switch (k) {
+				case 2:
+					createInvertMasks();
+					OUTPUT_FORMAT_TYPE = "PNG-24";
+					TRIM_FLAG = true;
+					break;
+				case 3:
+					createInvertMasks();
+					OUTPUT_FORMAT_TYPE = "PNG-8";
+					TRIM_FLAG = false;
+					break;
+			}
 			
 			OUTPUT_FOLDER = foldersToProcess[i] + "/" + mosaicTypes[j] + "/" + outputTypes[k];
 
@@ -187,6 +194,33 @@ for (var i = 0; i < foldersToProcess.length; i++) {
 	}
 }
 
+function createCenterMasks() {
+	var numLayers = app.activeDocument.layers.length;
+	var layer = app.activeDocument.layers[0];
+	app.activeDocument.activeLayer = layer;
+	
+	for (var i = 0; i < numLayers; i++) {
+		var layer = app.activeDocument.layers[i];
+		app.activeDocument.activeLayer = layer;
+		
+		var idDlt = charIDToTypeID( "Dlt " );
+			var desc41 = new ActionDescriptor();
+			var idnull = charIDToTypeID( "null" );
+				var ref11 = new ActionReference();
+				var idChnl = charIDToTypeID( "Chnl" );
+				var idChnl = charIDToTypeID( "Chnl" );
+				var idMsk = charIDToTypeID( "Msk " );
+				ref11.putEnumerated( idChnl, idChnl, idMsk );
+			desc41.putReference( idnull, ref11 );
+			var idAply = charIDToTypeID( "Aply" );
+			desc41.putBoolean( idAply, true );
+		executeAction( idDlt, desc41, DialogModes.NO );
+		
+		var currentLayer = app.activeDocument.layers[i];  
+		currentLayer.name = currentLayer.name.split(".")[0] + "_center"
+	}
+}
+
 function createInvertMasks() {
 	var numLayers = app.activeDocument.layers.length;
 	var layer = app.activeDocument.layers[0];
@@ -231,6 +265,32 @@ function createInvertMasks() {
 		
 		var currentLayer = app.activeDocument.layers[i];  
 		currentLayer.name = currentLayer.name.split(".")[0] + "_overlap"
+	}
+}
+
+function createFullImages() {
+	var numLayers = doc.layers.length;
+	var layer = app.activeDocument.layers[0];
+	app.activeDocument.activeLayer = layer;
+	
+	for (var i = 0; i < numLayers; i++) {
+		var layer = app.activeDocument.layers[i];
+		app.activeDocument.activeLayer = layer;
+		
+		// Deletes the mask
+		var idDlt = charIDToTypeID( "Dlt " );
+			var desc35 = new ActionDescriptor();
+			var idnull = charIDToTypeID( "null" );
+				var ref7 = new ActionReference();
+				var idChnl = charIDToTypeID( "Chnl" );
+				var idChnl = charIDToTypeID( "Chnl" );
+				var idMsk = charIDToTypeID( "Msk " );
+				ref7.putEnumerated( idChnl, idChnl, idMsk );
+			desc35.putReference( idnull, ref7 );
+		executeAction( idDlt, desc35, DialogModes.NO );
+		
+		var currentLayer = app.activeDocument.layers[i];  
+		currentLayer.name = currentLayer.name.split(".")[0] + "_full"
 	}
 }
 

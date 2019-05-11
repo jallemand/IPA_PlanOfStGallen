@@ -8,17 +8,6 @@ function saveOverlapDifferences() {
 		// Get the current path to the photoshop file
 		var psbPath = app.activeDocument.path;
 		// Get the path to the tiff mosaic
-		var inputTiff = psbPath + "/" + inputPSB.split(".")[0] + ".tif";
-
-		// Load in the mosaic
-		var layer = doc.artLayers.add();
-		var img = new File(inputTiff); 
-		var openedFile = app.open(img);
-		openedFile.selection.selectAll();
-		openedFile.selection.copy();
-		openedFile.close(SaveOptions.DONOTSAVECHANGES);
-		doc.paste();
-		doc.save();
 		
 		// get number of layers
 		var numLayers = doc.layers.length;
@@ -104,13 +93,11 @@ function saveOverlapDifferences() {
 				
 				// Change the name of the layer
 				var currentLayer = app.activeDocument.layers[i];  
-				currentLayer.name = currentLayer.name.split(".")[0] + "_outside_diff"
+				currentLayer.name = currentLayer.name.split(".")[0] + "_overlap"
 			}
 		}
 		
 		// Remove the loaded tif
-		doc.layers[0].remove();
-		doc.save();
 	}
 }
 
