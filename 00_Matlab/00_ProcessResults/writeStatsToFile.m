@@ -1,4 +1,4 @@
-function writeStatsToFile(outStats, outHull, imName, outputDirectory)
+function writeStatsToFile(outStats, outHull, imName, outputDirectory, flags)
 
     % Create the output file paths
     outStatsFile = fullfile(outputDirectory, ['stats_', imName, '.csv']);
@@ -6,13 +6,21 @@ function writeStatsToFile(outStats, outHull, imName, outputDirectory)
     outConvexHullFile = fullfile(outputDirectory, ['convHull_', imName, '.csv']);
     
     % Convert statistics to matrix to output
-    outStatsMatrix = [outStats.minX, outStats.minY, outStats.minZ, ...
-                outStats.maxX, outStats.maxY, outStats.maxZ, outStats.stdX, ...
-                outStats.stdY, outStats.stdZ, outStats.RMSE_X, outStats.RMSE_Y, ...
-                outStats.RMSE_Z, outStats.pixels];
-            
-    % Convert histograms into matrix to output
-    outHistogramMatrix = [outStats.histX; outStats.histY; outStats.histZ];
+    if flags.threeChannels
+        outStatsMatrix = [outStats.minX, outStats.minY, outStats.minZ, ...
+                    outStats.maxX, outStats.maxY, outStats.maxZ, outStats.stdX, ...
+                    outStats.stdY, outStats.stdZ, outStats.RMSE_X, outStats.RMSE_Y, ...
+                    outStats.RMSE_Z, outStats.pixels];
+
+        % Convert histograms into matrix to output
+        outHistogramMatrix = [outStats.histX; outStats.histY; outStats.histZ];
+    else
+        outStatsMatrix = [outStats.minX, outStats.maxX, outStats.stdX, ...
+                    outStats.RMSE_X, outStats.pixels];
+
+        % Convert histograms into matrix to output
+        outHistogramMatrix = outStats.histX;
+    end
     
     if contains(version, 'R2019a')
         % Output the stats

@@ -1,4 +1,4 @@
-function compileImageStats(resultsFolder, outputFile)
+function compileImageStats(resultsFolder, outputFile, flags)
 % Get the all the stats files
 files = dir(fullfile(resultsFolder, 'stats_*.csv'));
 
@@ -9,7 +9,11 @@ numFiles = numel(files);
 patchNames = cell(length(files), 1);
 
 % Pre-allocate array to contain the results
-outStats = zeros(numFiles, 13);
+if flags.threeChannels
+    outStats = zeros(numFiles, 13);
+else
+    outStats = zeros(numFiles, 5);
+end
 
 % Iterate through the files
 for i = numel(files):-1:1
@@ -28,8 +32,12 @@ end
 
 % Get the average of all the images statistics
 meanStats = mean(outStats);
-meanStats(1:6) = ceil(meanStats(1:6));
+if flags.threeChannels
+    meanStats(1:6) = ceil(meanStats(1:6));
+else
+    meanStats(1:2) = ceil(meanStats(1:2));
+end
 meanStats(end) = round(meanStats(end));
 
-writeCompiledResults(outputFile, outStats, meanStats, patchNames)
+writeCompiledResults(outputFile, outStats, meanStats, patchNames, flags)
 end

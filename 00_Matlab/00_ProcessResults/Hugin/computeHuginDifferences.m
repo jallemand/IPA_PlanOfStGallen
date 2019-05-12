@@ -1,4 +1,4 @@
-function [dXYZ, outHull] = computeHuginDifferences(mosaicIm, layerPath)
+function [dXYZ, outHull] = computeHuginDifferences(mosaicIm, layerPath, flags)
     % Read in the current layer
     layer = imread(layerPath);
 

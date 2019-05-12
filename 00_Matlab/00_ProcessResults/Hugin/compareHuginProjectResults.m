@@ -1,12 +1,14 @@
 function compareHuginProjectResults(baseFolder)
 %% Produce the set of results from the output 
-
+    flags = [];
     % Convert the input folder path to lower case for comparison of the
     % photometric product type and the colour spectrum it was captured
     lowerPath = lower(baseFolder);
     
-    % Get a logical flag if the product is from the white light acquisition
-    whiteFlag = contains(lowerPath, 'white');
+    % Get a logical flags
+    flags.whiteLight = contains(lowerPath, 'white');
+    flags.normal = contains(lowerPath, 'normal');
+    flags.threeChannels = flags.whiteLight | flags.normal;
     
     % Get a cell array containing the associated patch name 
     fileNames = getFileNameOrder(whiteFlag);
@@ -84,9 +86,9 @@ function compareHuginProjectResults(baseFolder)
 
             % Iterate through each layer and output the results to file
             parfor k = 1:numLayers
-                [XYZ, outHull] = computeHuginDifferences(mosaic, useLayers{k});
-                outStats = computeImageStats(XYZ);
-                writeStatsToFile(outStats, outHull, fileNames{k}, outputFolders{i}{j})
+                [XYZ, outHull] = computeHuginDifferences(mosaic, useLayers{k}, flags);
+                outStats = computeImageStats(XYZ, flags);
+                writeStatsToFile(outStats, outHull, fileNames{k}, outputFolders{i}{j}, flags)
                 fprintf(' ... Written Image # %d\n', k);
             end
 

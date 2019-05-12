@@ -28,20 +28,6 @@ function imStats = computeImageStats(dXYZ, flags)
         % Compute max magnitude
         imStats.maxMag = max(imStats.magnitudes);
     else
-        imStats.maxX = max(dXYZ);
-
-        imStats.minX = min(dXYZ(:,1));
-
-        imStats.RMSE_X = sqrt(mean((dXYZ.^2)));
-
-        imStats.stdX = std(dXYZ(:,1));
-
-        [imStats.histX, ~] = histcounts(dXYZ(:,1), -255.5:1:255.5);
-
-        imStats.magnitudes = sqrt(dXYZ.^2);
-        imStats.pixels = length(dXYZ);
-
-        % Compute max magnitude
-        imStats.maxMag = max(imStats.magnitudes);
+        
     end
 end

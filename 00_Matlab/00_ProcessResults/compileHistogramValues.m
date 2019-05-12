@@ -1,4 +1,4 @@
-function compileHistogramValues(resultsFolder)
+function compileHistogramValues(resultsFolder, flags)
 % Get the all the stats files
 files = dir(fullfile(resultsFolder, 'histogram_*.csv'));
 
@@ -14,7 +14,12 @@ temp = fullfile(files(1).folder, files(1).name);
 temp = csvread(temp);
 numCols = length(temp);
 
-outHists = zeros(numFiles*3, numCols);
+if flags.threeChannels
+    outHists = zeros(numFiles*3, numCols);
+else
+    outHists = zeros(numFiles, numCols);
+end
+
 % Iterate through the files
 for i = numel(files):-1:1
     % Get the full file path to read
@@ -26,13 +31,15 @@ for i = numel(files):-1:1
     temp = split(temp{1}, '_');
     temp = temp{2};
     patchNames{i} = temp;
-    outHists(((i-1)*3)+1:((i-1)*3)+3,:) = csvread(tempFile);
+    if flags.threeChannels
+        outHists(((i-1)*3)+1:((i-1)*3)+3,:) = csvread(tempFile);
+    else
+        outHists(i,:) = csvread(tempFile);
+    end
 
 end
 
 outFile = fullfile(resultsFolder, 'patchHistograms.mat');
 
 save(outFile, 'outHists');
-
-
 end
