@@ -1,5 +1,11 @@
 function processAllHuginProjects(resultsFolder)
+%% This function reads in all the different hugin projects stored in the results folder.
+
+    % Get the current list of folders
     inFolders = dir(resultsFolder);
+    
+    % Iterate through the result of dir to remove items that aren't folders
+    % or the return folders . and ..
     for i = length(inFolders):-1:1
         thisFile = fullfile(inFolders(i).folder, inFolders(i).name);
         if ~isfolder(thisFile)
@@ -8,16 +14,17 @@ function processAllHuginProjects(resultsFolder)
             inFolders(i) = [];
         end    
     end
+
     
-    numResults = length(inFolders);
-    resultFolders = cell(numResults,1);
-    
-    
+    % Iterate through the folders
     for i = 1:length(inFolders)
-        resultFolders{i} = fullfile(inFolders(i).folder, inFolders(i).name);
-        fprintf('Processing: %s\n...\n', resultFolders{i});
+        % Create the full folder path
+        thisFolder = fullfile(inFolders(i).folder, inFolders(i).name);
+        fprintf('Processing: %s\n...\n', thisFolder);
         
-        compareHuginProjectResults(resultFolders{i});
+        % Start generating the results for this folder (wavelength and
+        % output type)
+        compareHuginProjectResults(thisFolder);
         fprintf('Complete!\n\n');
     end
 end

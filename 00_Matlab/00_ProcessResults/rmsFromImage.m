@@ -1,0 +1,26 @@
+function outStats = rmsFromImage(XYZ, imName, outputDirectory, normFlag)
+
+    outStats = computeImageStats(XYZ);
+    
+    outfile = fullfile(outputDirectory, [char(imName) '.txt']);
+    fid = fopen(outfile, 'w');
+    
+    if normFlag
+       % Output from normals
+       fprintf(fid, '%6s | %6d | %6d | %6d | %6d | %6d | %6d | %6.2f | %6.2f | %6.2f | %6.2f | %6.2f | %6.2f | %6d | %8d', ...
+                imName, outStats.minX, outStats.minY, outStats.minZ, ...
+                outStats.maxX, outStats.maxY, outStats.maxZ, outStats.stdX, ...
+                outStats.stdY, outStats.stdZ, outStats.RMSE_X, outStats.RMSE_Y, ...
+                outStats.RMSE_Z, outStats.maxMag, outStats.pixels);
+    else
+        % Output from normals
+       fprintf(fid, '%6s | %6d | %6d | %6d | %6d | %6d | %6d | %6.2f | %6.2f | %6.2f | %6.2f | %6.2f | %6.2f | %8d', ...
+                imName, outStats.minX, outStats.minY, outStats.minZ, ...
+                outStats.maxX, outStats.maxY, outStats.maxZ, outStats.stdX, ...
+                outStats.stdY, outStats.stdZ, outStats.RMSE_X, outStats.RMSE_Y, ...
+                outStats.RMSE_Z, outStats.pixels);
+    end
+    
+    fclose(fid);
+    
+end
