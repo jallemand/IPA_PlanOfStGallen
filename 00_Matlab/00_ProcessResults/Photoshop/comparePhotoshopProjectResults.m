@@ -1,21 +1,15 @@
-function compareHuginProjectResults(baseFolder)
+function comparePhotoshopProjectResults(baseFolder)
 %% Produce the set of results from the output 
 
     % Convert the input folder path to lower case for comparison of the
     % photometric product type and the colour spectrum it was captured
     lowerPath = lower(baseFolder);
     
-    % Get a logical flag if the folder contains a normal mosaic
-    normFlag = contains(lowerPath, 'normal');
-    
     % Get a logical flag if the product is from the white light acquisition
     whiteFlag = contains(lowerPath, 'white');
     
     % Get a cell array containing the associated patch name 
     fileNames = getFileNameOrder(whiteFlag);
-
-    % Types of patch layers to perform comparison on
-    layerTypes = {'Remapped', 'Exposure'};
     
     % Get all the mosaics outputs from hugin and how many there are
     baseMosaics = dir(fullfile(baseFolder, '*.tif'));
@@ -72,15 +66,12 @@ function compareHuginProjectResults(baseFolder)
         % Iterate through the two layer types output from Hugin
         for j = 1:2
             fprintf(' - Processing %s layers\n', layerTypes{j});
-            fprintf(' - Current temp: \n');
-            temp
+
             % Create a subfolder path according to the layer types and the
             % mosaic being compared with
             outputFolders{i}{j} = fullfile(outputFolder, [sprintf('%s_',temp{4:end-1}),temp{end}], layerTypes{j});
             if ~exist(outputFolders{i}{j}, 'dir')
                mkdir(outputFolders{i}{j});
-            else
-                delete(fullfile(outputFolders{i}{j}, outputFileName));
             end
                 
             % pass through the correct set of layers being processed
@@ -89,23 +80,26 @@ function compareHuginProjectResults(baseFolder)
             elseif j == 2
                 curLayers = remappedLayers;
             end
+            useLayers = cell(numLayers,1);
+            for thisInd = 1:numLayers
+                useLayers{thisInd} = fullfile(curLayers(thisInd).folder, curLayers(thisInd).name);
+            end
+                
 
             % Iterate through each layer and output the results to file
-            for k = 1:numLayers
-                [XYZ, outHull] = computeHuginDifferences(mosaicIm, layerPath);
+            parfor k = 1:numLayers
+                [XYZ, outHull] = computeHuginDifferences(mosaic, useLayers{k});
                 outStats = computeImageStats(XYZ);
-                writeStatsToFile(outStats, outHull, imName, outputDirectory)
+                writeStatsToFile(outStats, outHull, fileNames{k}, outputFolders{i}{j})
+                fprintf(' ... Written Image # %d\n', k);
             end
 
+            % Compile and output the results from all patches in the mosaic
             outfile = fullfile(outputFolders{i}{j}, outputFileName);
             compileImageStats(outputFolders{i}{j}, outfile)
             
-            outfile = fullfile(outputFolders{i}{j}, outputFileName);
-            compileHistogramValues(resultsFolder, )
-
-            
-            fclose(fid);
-
+            % Compile the histogram values and output it to a mat file
+            compileHistogramValues(outputFolders{i}{j})
         end
     end
 end

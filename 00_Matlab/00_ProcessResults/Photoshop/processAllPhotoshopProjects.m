@@ -1,4 +1,4 @@
-function processAllHuginProjects(resultsFolder)
+function processAllPhotoshopProjects(resultsFolder)
 %% This function reads in all the different hugin projects stored in the results folder.
 
     % Get the current list of folders

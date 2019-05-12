@@ -12,7 +12,7 @@ function compareHuginProjectResults(baseFolder)
     fileNames = getFileNameOrder(whiteFlag);
 
     % Types of patch layers to perform comparison on
-    layerTypes = {'Remapped', 'Exposure'};
+    layerTypes = {'Remapped'};
     
     % Get all the mosaics outputs from hugin and how many there are
     baseMosaics = dir(fullfile(baseFolder, '*.tif'));
@@ -67,7 +67,7 @@ function compareHuginProjectResults(baseFolder)
         mosaic = mosaic(:,:,1:3);
 
         % Iterate through the two layer types output from Hugin
-        for j = 1:2
+        for j = 1:1
             fprintf(' - Processing %s layers\n', layerTypes{j});
 
             % Create a subfolder path according to the layer types and the
@@ -90,7 +90,7 @@ function compareHuginProjectResults(baseFolder)
                 
 
             % Iterate through each layer and output the results to file
-            parfor k = 1:numLayers
+            for k = 1:numLayers
                 [XYZ, outHull] = computeHuginDifferences(mosaic, useLayers{k});
                 outStats = computeImageStats(XYZ);
                 writeStatsToFile(outStats, outHull, fileNames{k}, outputFolders{i}{j})
