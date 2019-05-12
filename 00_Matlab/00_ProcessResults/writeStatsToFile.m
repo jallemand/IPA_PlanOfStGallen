@@ -12,7 +12,7 @@ function writeStatsToFile(outStats, outHull, imName, outputDirectory)
                 outStats.RMSE_Z, outStats.pixels];
             
     % Convert histograms into matrix to output
-    outHistogramMatrix = [outStats.histX'; outStats.histY'; outStats.histZ'];
+    outHistogramMatrix = [outStats.histX; outStats.histY; outStats.histZ];
     
     if contains(version, 'R2019a')
         % Output the stats

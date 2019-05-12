@@ -21,26 +21,21 @@ function compareHuginProjectResults(baseFolder)
     % Create a folder for the output statistics
     outputFolder = fullfile(baseFolder, 'Output_Statistics');
 
-    % Get path for the exposure layers
-    exposureLayersFolder = fullfile(baseFolder, 'Exposure_Layers');
-    
     % Get path for the remapped layers
     remappedLayersFolder = fullfile(baseFolder, 'Remapped_Layers');
 
     % Get all the layer paths
-    exposureLayers = dir(fullfile(exposureLayersFolder, '*.tif'));
     remappedLayers = dir(fullfile(remappedLayersFolder, '*.tif'));
 
     % Get the integer value for the number of layers
-    numLayers = length(exposureLayers);
+    numLayers = length(remappedLayers);
     
     % Define the output filename
     outputFileName = 'compiledResults.txt';
     
     % Create the fullpath names for the layers to be compared
     for i = 1:numLayers
-        exposureLayers(i).fullPath = fullfile(exposureLayers(i).folder, exposureLayers(i).name);
-        remappedLayers(i).fullPath = fullfile(exposureLayers(i).folder, exposureLayers(i).name);
+        remappedLayers(i).fullPath = fullfile(remappedLayers(i).folder, remappedLayers(i).name);
     end
     
     % Pre-allocation
@@ -79,8 +74,6 @@ function compareHuginProjectResults(baseFolder)
                 
             % pass through the correct set of layers being processed
             if j == 1
-                curLayers = exposureLayers;
-            elseif j == 2
                 curLayers = remappedLayers;
             end
             useLayers = cell(numLayers,1);
