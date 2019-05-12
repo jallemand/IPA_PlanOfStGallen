@@ -10,7 +10,7 @@ function writeCompiledResults(outputFile, outStats, meanStats, patchNames)
             'Name', 'Min X', 'Min Y', 'Min Z', 'Max X', 'Max Y', ...
             'Max Z', 'Std X', 'Std Y', 'Std Z', 'RMSE X', 'RMSE Y', ...
             'RMSE Z', 'Pixels');
-    fprintf(fid, ['-------|', repmat('--------|', 1, 13), '---------\n']);
+    fprintf(fid, ['-------|', repmat('--------|', 1, 12), '---------\n']);
     
     % Output results for each file
     for i = 1:length(patchNames)
@@ -19,7 +19,7 @@ function writeCompiledResults(outputFile, outStats, meanStats, patchNames)
     end
 
     % Output the average for each field for all the patches
-    fprintf(fid, ['-------|', repmat('--------|', 1, 13), '---------\n']);
+    fprintf(fid, ['-------|', repmat('--------|', 1, 12), '---------\n']);
     fprintf(fid, 'Average| %6d | %6d | %6d | %6d | %6d | %6d | %6.2f | %6.2f | %6.2f | %6.2f | %6.2f | %6.2f | %8d', ...
             meanStats);
         

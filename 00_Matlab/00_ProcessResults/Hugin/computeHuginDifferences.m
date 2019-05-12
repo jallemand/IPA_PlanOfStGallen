@@ -36,15 +36,12 @@ function [XYZ, outHull] = computeHuginDifferences(mosaicIm, layerPath)
     XYZ = zeros(length(inds), 3);
     
     % Get the differences of the images
-    X = diffs(:, :, 1);
-    Y = diffs(:, :, 2);
-    Z = diffs(:, :, 3);
+    X = diffs(:, :, 1); X = X(:);
+    Y = diffs(:, :, 2); Y = Y(:);
+    Z = diffs(:, :, 3); Z = Z(:);
     
     % Convert to vector format and put in output array
-    XYZ(:,1) = X(:);
-    XYZ(:,2) = Y(:);
-    XYZ(:,3) = Z(:);
-    
-    % Keep only cells where only pixels that had an alpha value
-    XYZ = XYZ(inds,:);
+    XYZ(:,1) = X(inds);
+    XYZ(:,2) = Y(inds);
+    XYZ(:,3) = Z(inds);
 end

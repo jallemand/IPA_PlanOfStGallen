@@ -3,7 +3,7 @@ function writeStatsToFile(outStats, outHull, imName, outputDirectory)
     % Create the output file paths
     outStatsFile = fullfile(outputDirectory, ['stats_', imName, '.csv']);
     outHistogramFile = fullfile(outputDirectory, ['histogram_', imName, '.csv']);
-    outConvexHullFile = fullfile(outputDirectory, ['convHull', imName, '.csv']);
+    outConvexHullFile = fullfile(outputDirectory, ['convHull_', imName, '.csv']);
     
     % Convert statistics to matrix to output
     outStatsMatrix = [outStats.minX, outStats.minY, outStats.minZ, ...

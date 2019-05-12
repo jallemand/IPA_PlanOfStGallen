@@ -62,15 +62,14 @@ function compareHuginProjectResults(baseFolder)
         
         % Read in the mosiac
         fprintf('Reading mosaic:  %s\n', mosaicPaths{i});
-%         mosaic = imread(mosaicPaths{i});
-%         % Ignore the alpha channel to save on memory
-%         mosaic = mosaic(:,:,1:3);
+        mosaic = imread(mosaicPaths{i});
+        % Ignore the alpha channel to save on memory
+        mosaic = mosaic(:,:,1:3);
 
         % Iterate through the two layer types output from Hugin
         for j = 1:2
             fprintf(' - Processing %s layers\n', layerTypes{j});
-            fprintf(' - Current temp: \n');
-            temp
+
             % Create a subfolder path according to the layer types and the
             % mosaic being compared with
             outputFolders{i}{j} = fullfile(outputFolder, [sprintf('%s_',temp{4:end-1}),temp{end}], layerTypes{j});
@@ -84,18 +83,26 @@ function compareHuginProjectResults(baseFolder)
             elseif j == 2
                 curLayers = remappedLayers;
             end
+            useLayers = cell(numLayers,1);
+            for thisInd = 1:numLayers
+                useLayers{thisInd} = fullfile(curLayers(thisInd).folder, curLayers(thisInd).name);
+            end
+                
 
             % Iterate through each layer and output the results to file
-            for k = 1:numLayers
-                [XYZ, outHull] = computeHuginDifferences(mosaic, curLayers{k});
+            parfor k = 1:numLayers
+                [XYZ, outHull] = computeHuginDifferences(mosaic, useLayers{k});
                 outStats = computeImageStats(XYZ);
                 writeStatsToFile(outStats, outHull, fileNames{k}, outputFolders{i}{j})
+                fprintf(' ... Written Image # %d\n', k);
             end
 
+            % Compile and output the results from all patches in the mosaic
             outfile = fullfile(outputFolders{i}{j}, outputFileName);
             compileImageStats(outputFolders{i}{j}, outfile)
             
-            compileHistogramValues(resultsFolder)
+            % Compile the histogram values and output it to a mat file
+            compileHistogramValues(outputFolders{i}{j})
         end
     end
 end

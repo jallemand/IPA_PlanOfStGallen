@@ -15,7 +15,6 @@ function processAllHuginProjects(resultsFolder)
         end    
     end
 
-    
     % Iterate through the folders
     for i = 1:length(inFolders)
         % Create the full folder path

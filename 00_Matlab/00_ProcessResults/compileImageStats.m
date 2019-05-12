@@ -19,7 +19,7 @@ for i = numel(files):-1:1
     % Ensure that the file is not the output file as well
     if ~strcmp(tempFile, outputFile)
         temp = split(files(i).name, '.');
-        temp = split(temp, '_');
+        temp = split(temp{1}, '_');
         temp = temp{2};
         patchNames{i} = temp;
         outStats(i,:) = csvread(tempFile);

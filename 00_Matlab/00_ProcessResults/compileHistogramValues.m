@@ -14,20 +14,20 @@ temp = fullfile(files(1).folder, files(1).name);
 temp = csvread(temp);
 numCols = length(temp);
 
-outHists = zeros(numFiles, numCols);
+outHists = zeros(numFiles*3, numCols);
 % Iterate through the files
 for i = numel(files):-1:1
     % Get the full file path to read
     tempFile = fullfile(files(i).folder, files(i).name);
     
     % Ensure that the file is not the output file as well
-    if ~strcmp(tempFile, outputFile)
-        temp = split(files(i).name, '.');
-        temp = split(temp, '_');
-        temp = temp{2};
-        patchNames{i} = temp;
-        outHists(i,:) = csvread(tempFile);
-    end
+
+    temp = split(files(i).name, '.');
+    temp = split(temp{1}, '_');
+    temp = temp{2};
+    patchNames{i} = temp;
+    outHists(((i-1)*3)+1:((i-1)*3)+3,:) = csvread(tempFile);
+
 end
 
 outFile = fullfile(resultsFolder, 'patchHistograms.mat');
