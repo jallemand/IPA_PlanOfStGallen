@@ -90,7 +90,7 @@ function compareHuginProjectResults(baseFolder)
                 
 
             % Iterate through each layer and output the results to file
-            for k = 1:numLayers
+            parfor k = 1:numLayers
                 [XYZ, outHull] = computeHuginDifferences(mosaic, useLayers{k});
                 outStats = computeImageStats(XYZ);
                 writeStatsToFile(outStats, outHull, fileNames{k}, outputFolders{i}{j})

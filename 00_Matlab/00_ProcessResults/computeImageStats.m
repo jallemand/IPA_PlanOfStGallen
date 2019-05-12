@@ -17,9 +17,9 @@ function imStats = computeImageStats(XYZ)
     imStats.stdY = std(XYZ(:,2));
     imStats.stdZ = std(XYZ(:,3));
     
-    [imStats.histX, ~] = imhist(XYZ(:,1));
-    [imStats.histY, ~] = imhist(XYZ(:,2));
-    [imStats.histZ, ~] = imhist(XYZ(:,3));
+    [imStats.histX, ~] = histcounts(XYZ(:,1), -255.5:1:255.5);
+    [imStats.histY, ~] = histcounts(XYZ(:,2), -255.5:1:255.5);
+    [imStats.histZ, ~] = histcounts(XYZ(:,3), -255.5:1:255.5);
 
     imStats.magnitudes = sqrt((sum(XYZ,2)).^2);
     imStats.pixels = length(XYZ(:,1));
