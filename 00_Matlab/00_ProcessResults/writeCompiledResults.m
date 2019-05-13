@@ -30,7 +30,7 @@ function writeCompiledResults(outputFile, outStats, meanStats, patchNames, flags
 
         % Output results for each file
         for i = 1:length(patchNames)
-            fprintf(fid, '%6s | %6d | %6.2f | %6.2f | %8d\n', ...
+            fprintf(fid, '%6s | %6d | %6d | %6.2f | %6.2f | %8d\n', ...
                 patchNames{i}, outStats(i,:));
         end
 
