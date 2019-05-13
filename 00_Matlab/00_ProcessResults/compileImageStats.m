@@ -1,6 +1,6 @@
 function compileImageStats(resultsFolder, outputFile, flags)
 % Get the all the stats files
-files = dir(fullfile(resultsFolder, 'stats_*.csv'));
+files = dir(fullfile(resultsFolder, 'stats_*.mat'));
 
 % Get the number of files
 numFiles = numel(files);
@@ -26,7 +26,8 @@ for i = numel(files):-1:1
         temp = split(temp{1}, '_');
         temp = temp{2};
         patchNames{i} = temp;
-        outStats(i,:) = csvread(tempFile);
+        temp = load(tempFile, 'outStatsMatrix');
+        outStats(i,:) = temp.outStatsMatrix;
     end
 end
 

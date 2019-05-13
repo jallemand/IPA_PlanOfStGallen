@@ -23,7 +23,7 @@ function processAllPhotoshopProjects(resultsFolder)
         
         % Start generating the results for this folder (wavelength and
         % output type)
-        compareHuginProjectResults(thisFolder);
+        comparePhotoshopProjectResults(thisFolder);
         fprintf('Complete!\n\n');
     end
 end

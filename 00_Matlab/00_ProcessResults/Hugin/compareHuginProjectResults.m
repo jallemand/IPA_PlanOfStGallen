@@ -86,7 +86,7 @@ function compareHuginProjectResults(baseFolder)
 
             % Iterate through each layer and output the results to file
             parfor k = 1:numLayers
-                [XYZ, outHull] = computeHuginDifferences(mosaic, useLayers{k}, flags);
+                [XYZ, outHull] = computeHuginDifferences(mosaic, useLayers{k});
                 outStats = computeImageStats(XYZ, flags);
                 writeStatsToFile(outStats, outHull, fileNames{k}, outputFolders{i}{j}, flags)
                 fprintf(' ... Written Image # %d\n', k);
@@ -94,10 +94,10 @@ function compareHuginProjectResults(baseFolder)
 
             % Compile and output the results from all patches in the mosaic
             outfile = fullfile(outputFolders{i}{j}, outputFileName);
-            compileImageStats(outputFolders{i}{j}, outfile)
+            compileImageStats(outputFolders{i}{j}, outfile, flags)
             
             % Compile the histogram values and output it to a mat file
-            compileHistogramValues(outputFolders{i}{j})
+            compileHistogramValues(outputFolders{i}{j}, flags)
         end
     end
 end

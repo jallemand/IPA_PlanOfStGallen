@@ -53,7 +53,7 @@ function [XYZ, outHull] = computePhotoshopDifferences(mosaicIm, layerPath, maskP
     XYZ(:,2) = Y(inds);
     XYZ(:,3) = Z(inds);
     
-    maxInds = (abs(XYZ(:,1)) == 255) & (abs(XYZ(:,2)) == 255) & (abs(XYZ(:,3)) == 255);
+    maxInds = (abs(XYZ(:,1) == 255) & (XYZ(:,2) == 255) & (XYZ(:,3) == 255);
     XYZ(maxInds,:) = [];
 end
 

@@ -1,6 +1,6 @@
 function compileHistogramValues(resultsFolder, flags)
 % Get the all the stats files
-files = dir(fullfile(resultsFolder, 'histogram_*.csv'));
+files = dir(fullfile(resultsFolder, 'histogram_*.mat'));
 
 % Get the number of files
 numFiles = numel(files);
@@ -11,8 +11,8 @@ patchNames = cell(length(files), 1);
 % Pre-allocate array to contain the results
 
 temp = fullfile(files(1).folder, files(1).name);
-temp = csvread(temp);
-numCols = length(temp);
+temp = load(temp, 'outHistogramMatrix');
+numCols = length(temp.outHistogramMatrix);
 
 if flags.threeChannels
     outHists = zeros(numFiles*3, numCols);
@@ -31,12 +31,12 @@ for i = numel(files):-1:1
     temp = split(temp{1}, '_');
     temp = temp{2};
     patchNames{i} = temp;
+    temp = load(tempFile, 'outHistogramMatrix');
     if flags.threeChannels
-        outHists(((i-1)*3)+1:((i-1)*3)+3,:) = csvread(tempFile);
+        outHists(((i-1)*3)+1:((i-1)*3)+3,:) = temp.outHistogramMatrix;
     else
-        outHists(i,:) = csvread(tempFile);
+        outHists(i,:) = temp.outHistogramMatrix;
     end
-
 end
 
 outFile = fullfile(resultsFolder, 'patchHistograms.mat');

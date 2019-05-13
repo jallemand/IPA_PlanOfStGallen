@@ -1,9 +1,9 @@
 function writeStatsToFile(outStats, outHull, imName, outputDirectory, flags)
 
     % Create the output file paths
-    outStatsFile = fullfile(outputDirectory, ['stats_', imName, '.csv']);
-    outHistogramFile = fullfile(outputDirectory, ['histogram_', imName, '.csv']);
-    outConvexHullFile = fullfile(outputDirectory, ['convHull_', imName, '.csv']);
+    outStatsFile = fullfile(outputDirectory, ['stats_', imName, '.mat']);
+    outHistogramFile = fullfile(outputDirectory, ['histogram_', imName, '.mat']);
+    outConvexHullFile = fullfile(outputDirectory, ['convHull_', imName, '.mat']);
     
     % Convert statistics to matrix to output
     if flags.threeChannels
@@ -21,25 +21,15 @@ function writeStatsToFile(outStats, outHull, imName, outputDirectory, flags)
         % Convert histograms into matrix to output
         outHistogramMatrix = outStats.histX;
     end
-    
-    if contains(version, 'R2019a')
-        % Output the stats
-        writematrix(outStatsMatrix, outStatsFile);
 
-        % Output the histograms
-        writematrix(outHistogramMatrix, outHistogramFile);
+    % Output the stats
+    save(outStatsFile, 'outStatsMatrix');
 
-        % Output the convex hull coordinates
-        writematrix(outHull, outConvexHullFile);
-    else
-        % Output the stats
-        csvwrite(outStatsFile, outStatsMatrix);
+    % Output the histograms
+    save(outHistogramFile, 'outHistogramMatrix');
 
-        % Output the histograms
-        csvwrite(outHistogramFile, outHistogramMatrix);
+    % Output the convex hull coordinates
+    save(outConvexHullFile, 'outHull');
 
-        % Output the convex hull coordinates
-        csvwrite(outConvexHullFile, outHull);
-    end
     
 end
