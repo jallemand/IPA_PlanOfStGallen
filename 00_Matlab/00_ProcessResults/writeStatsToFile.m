@@ -1,9 +1,9 @@
-function writeStatsToFile(outStats, outHull, imName, outputDirectory, flags)
+function writeStatsToFile(outStats, outHull, imName, resultPaths, flags)
 
     % Create the output file paths
-    outStatsFile = fullfile(outputDirectory, ['stats_', imName, '.mat']);
-    outHistogramFile = fullfile(outputDirectory, ['histogram_', imName, '.mat']);
-    outConvexHullFile = fullfile(outputDirectory, ['convHull_', imName, '.mat']);
+    outStatsFile = fullfile(resultPaths.mosaicDiffs, ['stats_', imName, '.mat']);
+    outHistogramFile = fullfile(resultPaths.histograms, ['histogram_', imName, '.mat']);
+    outConvexHullFile = fullfile(resultPaths.convexHulls, ['convHull_', imName, '.mat']);
     
     % Convert statistics to matrix to output
     if flags.threeChannels

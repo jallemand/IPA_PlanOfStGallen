@@ -1,5 +1,9 @@
-function compileImageStats(resultsFolder, outputFile, flags)
+function compileImageStats(resultsFolder, flags)
 % Get the all the stats files
+% Define the output filename
+outputFileName = 'compiledResults.txt';
+outputFile = fullfile(resultsFolder, outputFileName);
+
 files = dir(fullfile(resultsFolder, 'stats_*.mat'));
 
 % Get the number of files

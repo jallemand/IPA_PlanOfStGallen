@@ -27,8 +27,7 @@ function [dXYZ, outHull] = computeHuginDifferences(mosaicIm, layerPath)
     
     partMosaic = int16(partMosaic(:,:,1:3));
     layer = int16(layer(:,:,1:3));
-    
-%     [rows, cols, ~] = size(partMosaic);
+
     
     partMosaic_x = partMosaic(:,:,1); partMosaic_x = partMosaic_x(:);
     partMosaic_y = partMosaic(:,:,2); partMosaic_y = partMosaic_y(:);
@@ -43,11 +42,5 @@ function [dXYZ, outHull] = computeHuginDifferences(mosaicIm, layerPath)
     clear layer_x layer_y layer_z
     
     dXYZ = single(layer) - single(partMosaic);
-    
-%     diffArray = nan(rows,cols,3);
-%     for i = 1:3
-%         temp = nan(rows, cols);
-%         temp(inds) = dXYZ(:,i);
-%         diffArray(:,:,i) = temp;
-%     end
+
 end
