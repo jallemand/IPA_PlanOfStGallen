@@ -3,14 +3,14 @@
 addpath(genpath('../02_MatlabDependencies'));
 
 % Define input directories
-normalFolder = 'D:\00_Allemand_IPA\00_Data\02_FinalOutput\02_Back\00_WhiteLight\00_NormalMaps';
-ambientFolder = 'D:\00_Allemand_IPA\00_Data\02_FinalOutput\02_Back\00_WhiteLight\02_Ambient';
+normalFolder = 'E:\Scratch\temp\Normals';
+ambientFolder = 'E:\Scratch\temp\Ambients';
 
 % Define output directories
-outputFolder = 'D:\00_Allemand_IPA\00_Data\02_FinalOutput\02_Back\00_WhiteLight';
-outHeightDir = 'D:\00_Allemand_IPA\00_Data\02_FinalOutput\02_Back\00_WhiteLight\04_Heightmaps';
-outFullPointDir = 'D:\00_Allemand_IPA\00_Data\02_FinalOutput\02_Back\00_WhiteLight\03_PointClouds\Full_Resolution';
-outSubPointDir = 'D:\00_Allemand_IPA\00_Data\02_FinalOutput\02_Back\00_WhiteLight\03_PointClouds\Subsampled\Raw';
+outputFolder = 'E:\Scratch\temp\Outputs';
+outHeightDir = fullfile(outputFolder,'04_Heightmaps');
+outFullPointDir = fullfile(outputFolder,'05_Full_Resolution_PointClouds');
+outSubPointDir = fullfile(outputFolder,'06_SubSampled_PointClouds');
 % Spacing between pixels
 pixelSpacing = 1;
 
@@ -18,7 +18,7 @@ pixelSpacing = 1;
 createPtCloud = true;
 createHeightMap = true;
 ptCloudColours = true;
-ptCloudNormals = false;
+ptCloudNormals = true;
 
 %% Pre-processing
 normalPaths = [dir(fullfile(normalFolder, '*.png')) dir(fullfile(normalFolder, '*.tif'))];
@@ -73,9 +73,16 @@ if createPtCloud
         if 7 ~= exist(outFullPointDir,'dir')
            mkdir(outFullPointDir)
         end
+        if 7 ~= exist(outSubPointDir,'dir')
+           mkdir(outSubPointDir)
+        end
+        
     else
         if 7 ~= exist(outFullPointDir,'dir')
            mkdir(outFullPointDir)
+        end
+        if 7 ~= exist(outSubPointDir,'dir')
+           mkdir(outSubPointDir)
         end
     end
 end
@@ -110,7 +117,7 @@ parfor i = 1:n_norms
     if createPtCloud || createHeightMap
         imNorm = imread(normalPath);
         [~, name, ~] = fileparts(normalPath);
-        [xyz, Z] = normal2xyz(imNorm, pixelSpacing)
+        [xyz, Z] = normal2xyz(imNorm, pixelSpacing);
         minZ(i) = min(Z(:));
         maxZ(i) = max(Z(:));
         out_Z{i} = Z;
@@ -119,15 +126,15 @@ parfor i = 1:n_norms
             fprintf('Creating point cloud for image %i ... \n', i);
             ptCloudName = [outFullPointDir, '\', name, '.ply'];
 
-            [pCloud] = createPtCloud_IPA(xyz, imNorm, imAmb, ...
-                ptCloudNormals, ptCloudColours)
-            pcwrite(pCloud, ptCloudName, 'Encoding', 'binary');
+            [fullCloud] = createPtCloud_IPA(xyz, imNorm, imAmb, ...
+                ptCloudNormals, ptCloudColours);
+            pcwrite(fullCloud, ptCloudName, 'Encoding', 'binary');
             
-            outCloud = pcdownsample(pCloud, 'random', 0.1);
+            subCloud = pcdownsample(fullCloud, 'random', 0.1);
             
-            [~, name, ~] = fileparts(ptCloudPaths{i});
+            [~, name, ~] = fileparts(ptCloudName);
             ptCloudName = [outSubPointDir, '\', name, '.ply'];
-            pcwrite(outCloud, ptCloudName, 'Encoding', 'binary');
+            pcwrite(subCloud, ptCloudName, 'Encoding', 'binary');
         end
 
     end
@@ -149,12 +156,6 @@ end
 fprintf('===== FINISHED CREATING HEIGHT MAPS =====\n')
 fprintf('========== PROCESSING COMPLETE ==========\n\n')
 
-
-% Get a list of all point clouds
-ptCloudFiles = dir(fullfile(fullPtCloudDir, '*.ply'));
-ptCloudPaths = [];
-% Get the number of point clouds
-num = size(ptCloudFiles,1);
 
 
 
