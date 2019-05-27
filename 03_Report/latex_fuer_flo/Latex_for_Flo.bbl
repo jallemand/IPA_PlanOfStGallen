@@ -1,0 +1,100 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nyt/global//global/global}
+  \entry{chollet2017}{book}{}
+    \name{author}{1}{}{%
+      {{hash=CF}{%
+         family={Chollet},
+         familyi={C\bibinitperiod},
+         given={F.},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Manning Publications Company}%
+    }
+    \strng{namehash}{CF1}
+    \strng{fullhash}{CF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2017}
+    \field{labeldatesource}{year}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{isbn}{9781617294433}
+    \field{title}{Deep Learning with Python}
+    \field{year}{2017}
+  \endentry
+
+  \entry{Dobbertin2005}{article}{}
+    \name{author}{3}{}{%
+      {{hash=DM}{%
+         family={Dobbertin},
+         familyi={D\bibinitperiod},
+         given={Matthias},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=HC}{%
+         family={Hug},
+         familyi={H\bibinitperiod},
+         given={Christian},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=MN}{%
+         family={Mizoue},
+         familyi={M\bibinitperiod},
+         given={Nobuya},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DM+1}
+    \strng{fullhash}{DMHCMN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2005}
+    \field{labeldatesource}{year}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{abstract}{%
+    We tested whether the semi-automatic program CROCO can replace visual
+  assessments of slides to detect changes in defoliation assessment methods. We
+  randomly selected a series of slides of 24 Norway spruce trees with 220 field
+  assessments made between 1986 and 1995. The slides had been randomly arranged
+  and assessed by three experts without knowledge of the tree number or the
+  year when the slide was taken. Defoliation scores were computed with CROCO.
+  Each tree had thus three different defoliation scores, field assessments,
+  photo assessments and CROCO scores.%
+    }
+    \verb{doi}
+    \verb 10.1007/s10661-005-6019-1
+    \endverb
+    \field{issn}{1573-2959}
+    \field{number}{1}
+    \field{pages}{167\bibrangedash 178}
+    \field{title}{Using slides to test for changes in crown defoliation
+  assessment methods part II: Application of the image analysis system CROCO}
+    \verb{url}
+    \verb https://doi.org/10.1007/s10661-005-6019-1
+    \endverb
+    \field{volume}{102}
+    \field{journaltitle}{Environmental Monitoring and Assessment}
+    \field{year}{2005}
+  \endentry
+\enddatalist
+\endinput

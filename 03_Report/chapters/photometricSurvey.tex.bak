@@ -1,0 +1,86 @@
+% !TeX spellcheck = en_GB
+% !TeX encoding = UTF-8
+% !TeX root = ../report.tex
+
+\chapter{Photometric Stereo Survey}
+\label{chp:PhotometricStereo}
+
+\section{Introduction}
+This section will describe the main physical processes and considerations regarding the data acquisition of the Plan of St Gall using the Minidome. This chapter will not provide an in depth explanation of photometric stereo, nor some of the finer details associated to the Minidome that as volunteered and controlled by the group from Leuven as the major part of this project was focussed on utilising the post-processed outputs from the Minidome provided by them.
+
+\section{Location}
+As the Stiftsbezirk St.Gallen are the custodians of the Plan and responsible for the safety and security of the Plan, the photometric stereo survey was performed within a secure room provided on the premises. This allowed allowed for not only the secure storage of the Plan and Minidome equipment overnight, but also the oversight of their staff for the handling of the Plan throughout the data acquisition.
+
+\section{Equipment}
+
+- Minidome
+	- 270 LEDs Whitelight
+	- 180 Multispectral
+	
+- Camera specs?
+
+- 1 plan
+
+- Tripods and rail setup for holding the minidome over the plan
+
+- Trolley
+
+- Tables which the trolley would be rolled along
+
+- Tape to mark positions of trolley to ensure full coverage
+
+- Measuring "tape"/"stick" (I'm not sure what the measuring things here are called... I'm used to the metal rolling ones
+
+- Laptop and NES storage system for capture of all the data
+
+\section{Considerations}
+
+- Room selection
+
+- White light / Multispectral
+
+- Setup and movement of the plan
+
+- overlap
+
+- Room lighting
+
+- Room temperature
+
+- Moving of floor boards
+	- During acquisition
+	
+	
+\section{Methodology}
+
+	\paragraph{Acquisition}
+	
+	- Geometric calibration
+	
+	- Exposure calibration
+	
+	- Acquisition
+	
+	- White front
+	
+	- White back
+	
+	- Multispectral front
+	
+	- Limitation of NUV / NIR exposure to plan
+		- Cover	
+	
+
+	\paragraph{Processing}
+	
+	- Camera calibration
+	
+	- Exposure calibration
+	
+	- Determine albedo / ambient / normal products
+	
+	- Cluster processing for exposure correction
+
+\section{Results}
+
+\section{Analysis}

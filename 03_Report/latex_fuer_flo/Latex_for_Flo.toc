@@ -1,0 +1,36 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{List of Figures}{vi}{section*.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{List of Tables}{vi}{section*.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Measurement}{5}{section.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1}Setup}{5}{subsection.2.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2}Minidome}{5}{subsection.2.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.2.1}Shape of Shading}{5}{subsubsection.2.2.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.2.2}Data}{5}{subsubsection.2.2.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Stitiching}{7}{section.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Feature detection}{8}{section.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1}Needle holes}{8}{subsection.4.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1}Scientific Approach}{8}{subsubsection.4.1.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.2}Reality}{8}{subsubsection.4.1.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2}Scratches}{8}{subsection.4.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Conclusion}{9}{section.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{References}{9}{section*.8}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A}Appendix}{11}{appendix.A}% 

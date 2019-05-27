@@ -1,0 +1,10 @@
+% !TeX spellcheck = en_US
+% !TeX encoding = UTF-8
+% !TeX root = ../report.tex
+
+\chapter{Appendix}
+\label{chp:Appendix}
+
+The following code is the definition of the bibliography entry of the document class IDSCreport~\cite{IDSCreportClass}.
+
+\lstinputlisting[style=plaincode,xleftmargin=1em]{bibliography.bib}

@@ -1,0 +1,25 @@
+% !TeX spellcheck = en_UK
+% !TeX encoding = UTF-8
+% !TeX root = ../report.tex
+
+\chapter{Introduction}
+\label{chp:IntroductionChapter}
+
+
+\section{Plan of St Gall}
+The Plan of St Gall is one of the only remaining major architectural drawings from the period between the fall of the Western Roman empire until the 13th century (Reference wikipedia...). At nearly 1200 years of age and consisting of 5 pieces of parchment stitched together, significant care has to be taken to ensure that it is preserved into the future. For this reason, there has been expressed interested in capturing 3D information about the surface of the plan at a fine scale that may not have been readily visible by the human eye. By capturing this information digitally, it enables researchers, historians or other interested parties unrestricted access to the plan from wherever they are in the world. Furthermore, in the mission to preserve the plan, this will reduce the need for physical inspection of the plan and decrease the amount it is exposed to environmental conditions that will hasten the deterioration process of the plan.
+
+\section{Project Overview/goals}
+Previously, a high resolution photogrammetric stereo 3D model has been generated of the Plan of St Gall, but similarly to the Nyquist-Shannon sampling theorem for signal processing, the resolution of the 3D model has to be higher than that of the features one seeks to identify within it. The 3D model acquired, although of a high resolution, was not quite high enough to discern fine features in the parchment, such as needle holes, without having the physical parchment for comparison or a prior knowledge of the existing feature. 
+
+Because of this, it was proposed and accepted to perform an extremely high resolution photometric stereo capture of the full plan. Following the capture of the plan, the data acquired was to be combined into a full high resolution model or image mosaic.
+
+In addition to the stitching of the plan, further exploratory analysis would be performed on the output. This includes feature detection of pinholes or scratch marks that have been expressed as of interest. Geometric and radiometric differences will also be analysed for various effects.
+
+\section{Photometric Stereo}
+Although photometric stereo does not natively provide a 3D model in the typical sense, but what it does capture is a set of 3D vectors representing the surface of the object projected onto an image plane. Thus the output is in the form of an image where the typical RGB colour channels representing a 3D normal vector for the area of the object that each pixel projected onto. This leads to the common reference of this being referred to as 2.5D data as the image only has 2 dimensions but the normal maps provide a discretised approximation of the normal vectors for the objects surface within the region each pixel covered. 
+
+In addition to the 3D properties of the plan that can be obtained through the normal maps from the photometric stereo, ambient and albedo images can also be generated which can also be used to provide additional information about the surface of the objects reflectance properties which is not captured in a photogrammetric stereo model. 
+
+The resulting project of the collaboration between the Stiftsbibliothek and the group behind the Minidome from Leuven University (check names) can be described in three parts. The first part consists of the preparation and data capture of the Plan of St Gall largely performed by the staff from Leuven. The last two sections represent the individual works of the two authors regarding the specific works each author performed on the Plan of St Gall.
+

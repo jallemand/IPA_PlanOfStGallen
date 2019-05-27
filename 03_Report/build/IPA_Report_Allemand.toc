@@ -1,0 +1,33 @@
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}Plan of St Gall}{1}{section.1.1}% 
+\contentsline {section}{\numberline {1.2}Project Overview/goals}{1}{section.1.2}% 
+\contentsline {section}{\numberline {1.3}Photometric Stereo}{1}{section.1.3}% 
+\contentsline {chapter}{\numberline {2}Photometric Stereo Survey}{3}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Introduction}{3}{section.2.1}% 
+\contentsline {section}{\numberline {2.2}Location}{3}{section.2.2}% 
+\contentsline {section}{\numberline {2.3}Equipment}{3}{section.2.3}% 
+\contentsline {section}{\numberline {2.4}Considerations}{3}{section.2.4}% 
+\contentsline {section}{\numberline {2.5}Methodology}{4}{section.2.5}% 
+\contentsline {paragraph}{Acquisition}{4}{section*.4}% 
+\contentsline {paragraph}{Processing}{4}{section*.5}% 
+\contentsline {section}{\numberline {2.6}Results}{4}{section.2.6}% 
+\contentsline {section}{\numberline {2.7}Analysis}{4}{section.2.7}% 
+\contentsline {chapter}{\numberline {3}Feature Extraction}{5}{chapter.3}% 
+\contentsline {chapter}{\numberline {4}Plan Stitching}{7}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Introduction}{7}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}General Process}{7}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}Photo Mosaicing}{7}{section.4.3}% 
+\contentsline {paragraph}{Hugin}{7}{section*.6}% 
+\contentsline {paragraph}{Photoshop}{7}{section*.7}% 
+\contentsline {paragraph}{OpenCV}{7}{section*.8}% 
+\contentsline {paragraph}{ICE}{7}{section*.9}% 
+\contentsline {paragraph}{Results}{7}{section*.10}% 
+\contentsline {paragraph}{Discussion}{7}{section*.11}% 
+\contentsline {section}{\numberline {4.4}3D Model Reconstruction}{7}{section.4.4}% 
+\contentsline {paragraph}{Normal Map to Point Cloud}{7}{section*.12}% 
+\contentsline {paragraph}{Point Cloud Registration}{7}{section*.13}% 
+\contentsline {paragraph}{Point Cloud Cleaning}{7}{section*.14}% 
+\contentsline {paragraph}{Results}{7}{section*.15}% 
+\contentsline {paragraph}{Discussion}{7}{section*.16}% 
+\contentsline {chapter}{\numberline {5}Analysis}{9}{chapter.5}% 
+\contentsline {chapter}{\numberline {A}Example Appendix Chapter}{11}{appendix.A}% 

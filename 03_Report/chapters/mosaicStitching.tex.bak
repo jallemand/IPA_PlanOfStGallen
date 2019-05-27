@@ -1,0 +1,77 @@
+% !TeX spellcheck = en_US
+% !TeX encoding = UTF-8
+% !TeX root = ../report.tex
+
+\chapter{Plan Stitching}
+\label{chp:MosaicStitchingChapter}
+
+\section{Introduction}
+The digital recreation of the plan consisted of two main parts. Firstly, there was the combination
+
+	\paragraph{General Process}
+
+\section{PImage Stitching}
+
+	\subsection{Hugin}
+	- Powerful open source software
+	
+	- Control nearly all aspects of the stitching workflow
+		- Control point detection
+		- Control point matching
+		- Transformation parameter optimisation
+		- Exposure compensation
+		- Camera calibration
+		- Varying projection options
+
+	\subsection{Photoshop}
+	- Easy to use
+	- Minimal choice of parameters. Only a couple of projection choices and slight options for vignetting / geometric/exposure settings
+	- License required
+	- Processing time 30 min - 1 Hr
+
+	\subsection{OpenCV}
+	- Open source (free)
+	- Full control of parameters
+	- Ability to obtain optimised parameters - e.g. orientation and translations of images
+	- Slow processing time... unable to obtain a full resolution output with existing class or settings?
+	(Need to try again).
+
+	\subsection{ICE}
+	- Simple to use software
+	- Free 
+	- Some parameter control
+		- More projection options than photoshop
+	- Easy layout tools to achieve a better a priori of the relative image locations
+	- Fast
+	
+	\subsection{Results}
+	- Photoshop provided some of the most visually appealing results.
+		- Line work and visual features were nearly all continuous with minimal discontinuities compared to others
+	- Hugin could be consistent with the remapping and projection of results
+		- Line control points provided additional constraints to the outside of the plan to ensure they were "straight" and not so affected by projective distortions
+	- Ice was extremely fast and easy... although issues with the layout option for the white light as the software was rigid that all row and columns must contain the same number of images
+	- Results were visually appealing... Equal with photoshop?
+
+	\subsection{Discussion}
+
+\section{3D Model Reconstruction}
+
+	\subsection{Normal Map to Point Cloud}
+	Normal maps, or gradient fields, are an approximation of an objects surface normal vector for the area covered by the pixel in the image. The normal vector doesn't provide any direct information about the height of the objects surface but it does provide the directional change in height - proportional to the width of a pixel.
+	
+	By knowing these height difference across the discretised pixels, it is possible to determine a height at each pixel point via integration. A simplistic approach of picking one pixel as the reference point and then performing line integrations across the normal map is an easy to implement solution but does not have a unique solution. Further methods aim to improve the overall solution through the likes of error minimisation such as global least squares or multigrid methods.
+	
+	For this project, two methods of integration were tested. A global least squares method was implemented using that proposed by (reference) in code develepoed by (reference). The second method was through a multigrid method implemented by ESAT at Leuven.
+	
+	\subsubsection{Global Least Squares}
+	The global least squares method aims to be an improvement on a typical line integration by obtaining a unique solution. The implementation used by (reference) in their grad2surf() functions does .....
+	
+	As you can see in the Figure X, the result performs OK for a single patch.
+				
+	\subsection{Point Cloud Registration}
+	
+	\subsection{Point Cloud Cleaning}
+	
+	\subsection{Results}
+	
+	\subsection{Discussion}
