@@ -61,14 +61,31 @@ The digital recreation of the plan consisted of two main parts. Firstly, there w
 	
 	By knowing these height difference across the discretised pixels, it is possible to determine a height at each pixel point via integration. A simplistic approach of picking one pixel as the reference point and then performing line integrations across the normal map is an easy to implement solution but does not have a unique solution. Further methods aim to improve the overall solution through the likes of error minimisation such as global least squares or multigrid methods.
 	
-	For this project, two methods of integration were tested. A global least squares method was implemented using that proposed by (reference) in code develepoed by (reference). The second method was through a multigrid method implemented by ESAT at Leuven.
+	For this project, two methods of integration were tested. A global least squares method was implemented using that proposed by 
+	%\cite{<citekey1>}
+	 in code develepoed by 
+	 %\cite{<citekey2>}
+	 . The second method was through a multigrid method implemented by ESAT at Leuven. When performing the global least squares method, the multigrid implementation by ESAT was not known.
 	
 	\subsubsection{Global Least Squares}
-	The global least squares method aims to be an improvement on a typical line integration by obtaining a unique solution. The implementation used by (reference) in their grad2surf() functions does .....
+	The global least squares method aims to be an improvement on a typical line integration by obtaining a unique solution. The implementation used by 
+	%\cite{<citekey3>} 
+	in their grad2surf() functions does .....
 	
-	As you can see in the Figure X, the result performs OK for a single patch.
+	As you can see in the Figure X, the result performs OK for a single patch. The native output from this algorithm though causes the horizontal plane that the plan rested on to be set at a distinct angle. To correct this, a simple Least Squares fit to the plane was determined and the points reprojected onto an XY plane such that the height component determined from the global integration process is represented in the Z axis. An example of the final output can be seen in Figure X.
 				
 	\subsection{Point Cloud Registration}
+	Creation of the full plan with the individual patches requires a transformation of all their local coordinate systems into a global system. To do so a registration process was implemented to determine the corresponding transformations of the patches to their location within the global reference system and the full plan. The following process was all performed within Geomagic Control 2015.
+	
+		\paragraph{Manual Registration}
+		The full resolution patches were too large to be practical for a manual registration process so a set of subsampled patches at 1/4 resolution were used to determine the individual transformations. Once these patches were scaled to the corresct dimensions of the full resolution patches, an manual iterative approach registration was performed. 
+		
+		First a central patch of the plan was taken as the starting reference point and then the neighbouring patches that overlapped significantly were registered to it. This involved manually identifying visual features on the Plan in each of the two point clouds that would be used to determine the approximate transformation parameters of the patches.
+		
+		After these were aligned to the central patch, their subsequent neighbours were registered with respect to themselves. This was continued outwards towards the Plan's edge until all patches were aligned in the global reference system. Due to the manual feature selection, the process was rather slow but effective in providing a starting approximation of the transformation parameters between the patches.
+	
+		\paragraph{Automatic Global Registration}
+		With the manual registration complete, the. This global adjustment took a subsample of points from each of the patches and tried to minimise the RMS errors between neighbouring points within the overlapping regions. This global registration should provide an improvement of the alignment of Plan patches due to the minimal number of manual points used for the inital approximate registration.
 	
 	\subsection{Point Cloud Cleaning}
 	
