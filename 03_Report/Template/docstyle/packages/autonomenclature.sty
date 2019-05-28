@@ -1,0 +1,111 @@
+% autonomenclature.sty Style definitions for automated nomenclatures
+% Copyright (C) 2018  Andreas Ritter
+
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+% 
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+% 
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+
+
+% ==============================================================================
+% Main class definition of autonomenclature.sty
+% ==============================================================================
+\ProvidesPackage{autonomenclature}[2016/23/12 by Andreas Ritter (ETH Zurich)]
+\NeedsTeXFormat{LaTeX2e}
+
+\typeout{-- autonomenclature.sty Style definitions for automated nomenclatures}
+\typeout{autonomenclature.sty Copyright (C) 2018  Andreas Ritter, ETH Zurich}
+\typeout{This program comes with ABSOLUTELY NO WARRANTY; for details see license.txt.}
+\typeout{This is free software, and you are welcome to redistribute it}
+\typeout{under certain conditions; see license.txt for details. ---}
+
+
+
+
+% ==============================================================================
+% Declare package options
+% ==============================================================================
+% Language (german or english)
+\newif\if@isgerman
+\DeclareOption{german}{\@isgermantrue}
+\DeclareOption{english}{\@isgermanfalse}
+\DeclareOption*{\PassOptionsToPackage{\CurrentOption}{nomencl}}
+\ProcessOptions\relax
+
+
+
+
+% ==============================================================================
+% Load packages
+% ==============================================================================
+\RequirePackage{nomencl} % build on nomencl package
+\RequirePackage{tabto} % tabbing to fixed positions in a paragraph with \tab or \tabto{<length>}
+
+
+
+
+% ==============================================================================
+% Commands for text writing
+% ==============================================================================
+% Allows to add physical units
+\newcommand{\nomunit}[1]{\renewcommand{\nomentryend}{\tabto{\unittabpos}#1}}
+
+% Add symbol, index, or abbreviations to the nomenclature
+\newcommand{\newsymb}[3]{\nomenclature[A]{#1}{#2\nomunit{#3}}}
+\newcommand{\newsub}[2]{\nomenclature[B]{#1}{#2}}
+\newcommand{\newsuper}[2]{\nomenclature[C]{#1}{#2}}
+\newcommand{\newabbr}[2]{\nomenclature[D]{#1}{#2}}
+\newcommand{\newgloss}[2]{\nomenclature[E]{#1}{#2}}
+
+% Add and type symbol, index, or abbreviations
+\newcommand{\typesymb}[3]{#1\nomenclature[A]{#1}{#2\nomunit{#3}}}
+\newcommand{\typesub}[2]{#1\nomenclature[B]{#1}{#2}}
+\newcommand{\typesuper}[2]{#1\nomenclature[C]{#1}{#2}}
+\newcommand{\typeabbr}[2]{#1\nomenclature[D]{#1}{#2}}
+\newcommand{\typegloss}[2]{#1\nomenclature[E]{#1}{#2}}
+
+
+
+
+% ==============================================================================
+% Commands changing the nomenclature layout
+% ==============================================================================
+% Define tab positions
+\newlength{\descriptiontabpos}
+\newlength{\unittabpos}
+\setlength{\descriptiontabpos}{2cm}
+\setlength{\unittabpos}{0.75\textwidth}
+
+% Define subtitles
+\if@isgerman
+\newcommand{\@titlenomabbr}{\textbf{\Large{Akronyme und Abk\"{u}rzungen}}}
+\newcommand{\@titlenomsymb}{\textbf{\Large{Mathematische Symbole}}}
+\newcommand{\@titlenomsub}{\textbf{\Large{Tiefgestellte Zeichen}}}
+\newcommand{\@titlenomsuper}{\textbf{\Large{Hochgestellte Zeichen}}}
+\newcommand{\@titlenomgloss}{\textbf{\Large{Glossar}}}
+\else
+\newcommand{\@titlenomabbr}{\textbf{\Large{Acronyms and Abbreviations}}}
+\newcommand{\@titlenomsymb}{\textbf{\Large{Mathematical Symbols}}}
+\newcommand{\@titlenomsub}{\textbf{\Large{Subscripts}}}
+\newcommand{\@titlenomsuper}{\textbf{\Large{Superscripts}}}
+\newcommand{\@titlenomgloss}{\textbf{\Large{Glossary}}}
+\fi
+
+% Define categories
+\renewcommand{\nomgroup}[1]{
+\if A#1 \vspace{1cm} \item[\@titlenomsymb] \fi
+\if B#1 \vspace{1cm} \item[\@titlenomsub] \fi
+\if C#1 \vspace{1cm} \item[\@titlenomsuper] \fi
+\if D#1 \vspace{1cm} \item[\@titlenomabbr] \fi
+\if E#1 \vspace{1cm} \item[\@titlenomgloss] \fi
+} % Creates three sub-lists in nomenclature

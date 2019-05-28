@@ -1,4 +1,4 @@
-% !TeX spellcheck = en_US
+% !TeX spellcheck = en_GB
 % !TeX encoding = UTF-8
 % !TeX root = ../report.tex
 
@@ -6,13 +6,18 @@
 \label{chp:MosaicStitchingChapter}
 
 \section{Introduction}
-The digital recreation of the plan consisted of two main parts. Firstly, there was the combination
+\label{sec:Introduction}
+The digital recreation of the plan consisted of two main parts. Firstly, mosaicing or stitching together the individual normal, ambient and albedo patches was one of the first priorities. This not only provides a full, visually appealing, digital representation of the plan, but it also allows those viewing it the able to visualise the finer details with respect to the whole plan than inspecting features locally within an arbitrary patch. \Cref{sec:ImageStitching} will discuss in detail the different software implemented for this as well as the considerations, pros and cons of each one for this task.
+
+The second part was to create a proper 3D model of the Plan by an integration process of the normal maps. The approaches taken to do so are presented in \cref{sec:ModelReconstruction}.
 
 	\paragraph{General Process}
 
-\section{PImage Stitching}
+\section{Image Stitching}
+\label{sec:ImageStitching}
 
 	\subsection{Hugin}
+	\label{sec:Hugin}
 	- Powerful open source software
 	
 	- Control nearly all aspects of the stitching workflow
@@ -24,12 +29,14 @@ The digital recreation of the plan consisted of two main parts. Firstly, there w
 		- Varying projection options
 
 	\subsection{Photoshop}
+	\label{sec:Photoshop}
 	- Easy to use
 	- Minimal choice of parameters. Only a couple of projection choices and slight options for vignetting / geometric/exposure settings
 	- License required
 	- Processing time 30 min - 1 Hr
 
 	\subsection{OpenCV}
+	\label{sec:OpenCv}
 	- Open source (free)
 	- Full control of parameters
 	- Ability to obtain optimised parameters - e.g. orientation and translations of images
@@ -37,6 +44,7 @@ The digital recreation of the plan consisted of two main parts. Firstly, there w
 	(Need to try again).
 
 	\subsection{ICE}
+	\label{sec:Ice}
 	- Simple to use software
 	- Free 
 	- Some parameter control
@@ -45,6 +53,7 @@ The digital recreation of the plan consisted of two main parts. Firstly, there w
 	- Fast
 	
 	\subsection{Results}
+	\label{sec:ResultsStitching}
 	- Photoshop provided some of the most visually appealing results.
 		- Line work and visual features were nearly all continuous with minimal discontinuities compared to others
 	- Hugin could be consistent with the remapping and projection of results
@@ -53,28 +62,31 @@ The digital recreation of the plan consisted of two main parts. Firstly, there w
 	- Results were visually appealing... Equal with photoshop?
 
 	\subsection{Discussion}
+	\label{sec:DiscussionStitching}
 
 \section{3D Model Reconstruction}
+\label{sec:ModelReconstruction}
 
 	\subsection{Normal Map to Point Cloud}
+	\label{sec:Normal2Pts}
 	Normal maps, or gradient fields, are an approximation of an objects surface normal vector for the area covered by the pixel in the image. The normal vector doesn't provide any direct information about the height of the objects surface but it does provide the directional change in height - proportional to the width of a pixel.
 	
 	By knowing these height difference across the discretised pixels, it is possible to determine a height at each pixel point via integration. A simplistic approach of picking one pixel as the reference point and then performing line integrations across the normal map is an easy to implement solution but does not have a unique solution. Further methods aim to improve the overall solution through the likes of error minimisation such as global least squares or multigrid methods.
 	
-	For this project, two methods of integration were tested. A global least squares method was implemented using that proposed by 
-	%\cite{<citekey1>}
-	 in code develepoed by 
-	 %\cite{<citekey2>}
-	 . The second method was through a multigrid method implemented by ESAT at Leuven. When performing the global least squares method, the multigrid implementation by ESAT was not known.
+	For this project, two methods of integration were tested A global least squares method was implemented using that proposed by (reference) in code developed by (reference). The second method was through a multigrid method implemented by ESAT at Leuven. When performing the global least squares method, the multigrid implementation by ESAT was not known.
 	
 	\subsubsection{Global Least Squares}
-	The global least squares method aims to be an improvement on a typical line integration by obtaining a unique solution. The implementation used by 
-	%\cite{<citekey3>} 
-	in their grad2surf() functions does .....
+	\label{sec:GlobalLeastSquares}
+	The global least squares method aims to be an improvement on a typical line integration by obtaining a unique solution. The implementation used by (reference) in their grad2surf() functions does .....
 	
 	As you can see in the Figure X, the result performs OK for a single patch. The native output from this algorithm though causes the horizontal plane that the plan rested on to be set at a distinct angle. To correct this, a simple Least Squares fit to the plane was determined and the points reprojected onto an XY plane such that the height component determined from the global integration process is represented in the Z axis. An example of the final output can be seen in Figure X.
+	
+	\subsubsection{Multigrid Method}
+	\label{sec:MultigridMethod}
+	The multigrid methods aim .....
 				
 	\subsection{Point Cloud Registration}
+	\label{sec:PointCloudRegistration}
 	Creation of the full plan with the individual patches requires a transformation of all their local coordinate systems into a global system. To do so a registration process was implemented to determine the corresponding transformations of the patches to their location within the global reference system and the full plan. The following process was all performed within Geomagic Control 2015.
 	
 		\paragraph{Manual Registration}
@@ -85,10 +97,13 @@ The digital recreation of the plan consisted of two main parts. Firstly, there w
 		After these were aligned to the central patch, their subsequent neighbours were registered with respect to themselves. This was continued outwards towards the Plan's edge until all patches were aligned in the global reference system. Due to the manual feature selection, the process was rather slow but effective in providing a starting approximation of the transformation parameters between the patches.
 	
 		\paragraph{Automatic Global Registration}
-		With the manual registration complete, the. This global adjustment took a subsample of points from each of the patches and tried to minimise the RMS errors between neighbouring points within the overlapping regions. This global registration should provide an improvement of the alignment of Plan patches due to the minimal number of manual points used for the inital approximate registration.
+		With the manual registration complete, the. This global adjustment took a subsample of points from each of the patches and tried to minimise the RMS errors between neighbouring points within the overlapping regions. This global registration should provide an improvement of the patch alignments due to the minimal number of manual points used for the inital approximate registration.
 	
 	\subsection{Point Cloud Cleaning}
+	\label{sec:PointCloudCleaning}
 	
 	\subsection{Results}
+	\label{sec:ResultsPtClouds}
 	
 	\subsection{Discussion}
+	\label{sec:DiscussionPtClouds}

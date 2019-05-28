@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.15)  16 MAY 2019 20:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.5.15)  28 MAY 2019 09:38
 entering extended mode
 **./IPA_Report_Allemand.tex
 (IPA_Report_Allemand.tex
@@ -1886,14 +1886,10 @@ Package cleveref Info: `algorithmicx' support loaded on input line 3120.
 Package cleveref Info: `listings' support loaded on input line 3131.
 Package cleveref Info: no abbreviation of names on input line 7852.
 )))
-
-Class IDSCreport Warning: You cannot use this command on input line 24.
-
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
 
-(D:\Dropbox\01_Uni\02_ETH\04_Sem4\00_IPA\06_Report\build\IPA_Report_Allemand.au
-x)
+(E:\Scratch\03_Code\03_Report\build\IPA_Report_Allemand.aux)
 \openout1 = `IPA_Report_Allemand.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
@@ -1910,7 +1906,8 @@ LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 37.
 LaTeX Font Info:    ... okay on input line 37.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 37.
- ("E:\Program Files\MiKTeX 2.9\tex/latex/base\ts1cmr.fd"
+
+("E:\Program Files\MiKTeX 2.9\tex/latex/base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 37.
@@ -2021,15 +2018,14 @@ LaTeX Info: Redefining \ref on input line 37.
 LaTeX Info: Redefining \pageref on input line 37.
 LaTeX Info: Redefining \nameref on input line 37.
 
-(D:\Dropbox\01_Uni\02_ETH\04_Sem4\00_IPA\06_Report\build\IPA_Report_Allemand.ou
-t)
-(D:\Dropbox\01_Uni\02_ETH\04_Sem4\00_IPA\06_Report\build\IPA_Report_Allemand.ou
-t)
+(E:\Scratch\03_Code\03_Report\build\IPA_Report_Allemand.out)
+(E:\Scratch\03_Code\03_Report\build\IPA_Report_Allemand.out)
 \@outlinefile=\write5
 \openout5 = `IPA_Report_Allemand.out'.
 
 Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 37.
- ("E:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\se-pdfdoc.def"
+
+("E:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\se-pdfdoc.def"
 File: se-pdfdoc.def 2016/05/16 v1.11 stringenc: PDFDocEncoding
 )
 Package hyperref Info: Option `pageanchor' set `false' on input line 37.
@@ -2065,12 +2061,12 @@ Package hyperref Info: Option `pageanchor' set `false' on input line 37.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<docstyle/logos/eth.pdf, id=66, 854.19125pt x 229.85875pt>
+<docstyle/logos/eth.pdf, id=130, 854.19125pt x 229.85875pt>
 File: docstyle/logos/eth.pdf Graphic file (type pdf)
 <use docstyle/logos/eth.pdf>
 Package pdftex.def Info: docstyle/logos/eth.pdf  used on input line 37.
 (pdftex.def)             Requested size: 169.16689pt x 45.52458pt.
-<docstyle/logos/igp.png, id=67, 778.91pt x 244.915pt>
+<docstyle/logos/igp.png, id=131, 778.91pt x 244.915pt>
 File: docstyle/logos/igp.png Graphic file (type png)
 <use docstyle/logos/igp.png>
 Package pdftex.def Info: docstyle/logos/igp.png  used on input line 37.
@@ -2136,8 +2132,7 @@ Package hyperref Info: Option `pageanchor' set `true' on input line 37.
 ] [4
 
 ]
-(D:\Dropbox\01_Uni\02_ETH\04_Sem4\00_IPA\06_Report\build\IPA_Report_Allemand.to
-c)
+(E:\Scratch\03_Code\03_Report\build\IPA_Report_Allemand.toc)
 \tf@toc=\write6
 \openout6 = `IPA_Report_Allemand.toc'.
 
@@ -2178,9 +2173,6 @@ Chapter 2.
 
 ]) (chapters/featureExtraction.tex [4]
 Chapter 3.
-
-LaTeX Warning: Citation `IDSCreportClass' on page 5 undefined on input line 8.
-
 ) (chapters/mosaicStitching.tex [5
 
 
@@ -2188,23 +2180,26 @@ LaTeX Warning: Citation `IDSCreportClass' on page 5 undefined on input line 8.
 
 ]
 Chapter 4.
-) (chapters/analysis.tex [7
+[7
 
-] [8
+] [8]) (chapters/analysis.tex [9] [10
 
 ]
 Chapter 5.
+) (chapters/conclusion.tex [11
 
-LaTeX Warning: Citation `IDSCreportClass' on page 9 undefined on input line 8.
+] [12
 
-) (chapters/appendix.tex [9
+]
+Chapter 6.
+) (chapters/appendix.tex [13
 
-] [10
+] [14
 
 ]
 Appendix A.
 
-LaTeX Warning: Citation `IDSCreportClass' on page 11 undefined on input line 8.
+LaTeX Warning: Citation `IDSCreportClass' on page 15 undefined on input line 8.
 
 
 (bibliography.bib
@@ -2214,9 +2209,9 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 1.
 ))
 No file IPA_Report_Allemand.bbl.
-[11
+[15
 
-] [12
+] [16
 
 ]
 *geometry* verbose mode - [ newgeometry ] result:
@@ -2254,56 +2249,47 @@ No file IPA_Report_Allemand.bbl.
 
 File: docstyle/logos/eth.pdf Graphic file (type pdf)
 <use docstyle/logos/eth.pdf>
-Package pdftex.def Info: docstyle/logos/eth.pdf  used on input line 48.
+Package pdftex.def Info: docstyle/logos/eth.pdf  used on input line 49.
 (pdftex.def)             Requested size: 158.59639pt x 42.67912pt.
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 48.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 49.
  ("E:\Program Files\MiKTeX 2.9\tex/latex/lm\t1lmss.fd"
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [13
+) [17
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 48.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 48.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 49.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 49.
 
-(D:\Dropbox\01_Uni\02_ETH\04_Sem4\00_IPA\06_Report\build\IPA_Report_Allemand.au
-x)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 48.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 48.
+(E:\Scratch\03_Code\03_Report\build\IPA_Report_Allemand.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 49.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 49.
+Package rerunfilecheck Info: File `IPA_Report_Allemand.out' has not changed.
+(rerunfilecheck)             Checksum: 6C88483000FE671FD76DC26C6F8553B5;2182.
 
-
-Package rerunfilecheck Warning: File `IPA_Report_Allemand.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `IPA_Report_Allemand.out':
-(rerunfilecheck)             Before: AD5A488940948CD5750DF1AE60F8F7F2;993
-(rerunfilecheck)             After:  16AE5302BA72824FA2ED8722C92A8A93;1349.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 54081 strings out of 492895
- 1153228 string characters out of 3133479
- 1366155 words of memory out of 3000000
- 57116 multiletter control sequences out of 15000+200000
+ 54142 strings out of 492895
+ 1153813 string characters out of 3133479
+ 1367155 words of memory out of 3000000
+ 57165 multiletter control sequences out of 15000+200000
  616204 words of font info for 92 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,11n,98p,1005b,2624s stack positions out of 5000i,500n,10000p,200000b,50000s
-{E:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<E:/Program Files/M
-iKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><E:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/lm/lmbx12.pfb><E:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lm
-r10.pfb><E:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><E:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><E:/Program Files/MiKTeX 2.9
-/fonts/type1/public/lm/lmss10.pfb><E:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/lm/lmtt10.pfb>
-Output written on D:\Dropbox\01_Uni\02_ETH\04_Sem4\00_IPA\06_Report\build\IPA_R
-eport_Allemand.pdf (21 pages, 267704 bytes).
+{E:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc} <C:\Users\jon_a\Ap
+pData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/mathabx/dpi600\mathb9.pk><E:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><E:/Program Files/MiKTeX 
+2.9/fonts/type1/public/lm/lmbx12.pfb><E:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/lm/lmr10.pfb><E:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb
+><E:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><E:/Program Files
+/MiKTeX 2.9/fonts/type1/public/lm/lmss10.pfb><E:/Program Files/MiKTeX 2.9/fonts
+/type1/public/lm/lmtt10.pfb>
+Output written on E:\Scratch\03_Code\03_Report\build\IPA_Report_Allemand.pdf (2
+5 pages, 285439 bytes).
 PDF statistics:
- 260 PDF objects out of 1000 (max. 8388607)
- 67 named destinations out of 1000 (max. 500000)
- 143 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 353 PDF objects out of 1000 (max. 8388607)
+ 76 named destinations out of 1000 (max. 500000)
+ 271 words of extra memory for PDF output out of 10000 (max. 10000000)
 

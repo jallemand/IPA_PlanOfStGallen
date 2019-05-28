@@ -15,19 +15,24 @@
 \contentsline {chapter}{\numberline {3}Feature Extraction}{5}{chapter.3}% 
 \contentsline {chapter}{\numberline {4}Plan Stitching}{7}{chapter.4}% 
 \contentsline {section}{\numberline {4.1}Introduction}{7}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}General Process}{7}{section.4.2}% 
-\contentsline {section}{\numberline {4.3}Photo Mosaicing}{7}{section.4.3}% 
-\contentsline {paragraph}{Hugin}{7}{section*.6}% 
-\contentsline {paragraph}{Photoshop}{7}{section*.7}% 
-\contentsline {paragraph}{OpenCV}{7}{section*.8}% 
-\contentsline {paragraph}{ICE}{7}{section*.9}% 
-\contentsline {paragraph}{Results}{7}{section*.10}% 
-\contentsline {paragraph}{Discussion}{7}{section*.11}% 
-\contentsline {section}{\numberline {4.4}3D Model Reconstruction}{7}{section.4.4}% 
-\contentsline {paragraph}{Normal Map to Point Cloud}{7}{section*.12}% 
-\contentsline {paragraph}{Point Cloud Registration}{7}{section*.13}% 
-\contentsline {paragraph}{Point Cloud Cleaning}{7}{section*.14}% 
-\contentsline {paragraph}{Results}{7}{section*.15}% 
-\contentsline {paragraph}{Discussion}{7}{section*.16}% 
-\contentsline {chapter}{\numberline {5}Analysis}{9}{chapter.5}% 
-\contentsline {chapter}{\numberline {A}Example Appendix Chapter}{11}{appendix.A}% 
+\contentsline {paragraph}{General Process}{7}{section*.6}% 
+\contentsline {section}{\numberline {4.2}Image Stitching}{7}{section.4.2}% 
+\contentsline {subsection}{\numberline {4.2.1}Hugin}{7}{subsection.4.2.1}% 
+\contentsline {subsection}{\numberline {4.2.2}Photoshop}{7}{subsection.4.2.2}% 
+\contentsline {subsection}{\numberline {4.2.3}OpenCV}{7}{subsection.4.2.3}% 
+\contentsline {subsection}{\numberline {4.2.4}ICE}{7}{subsection.4.2.4}% 
+\contentsline {subsection}{\numberline {4.2.5}Results}{8}{subsection.4.2.5}% 
+\contentsline {subsection}{\numberline {4.2.6}Discussion}{8}{subsection.4.2.6}% 
+\contentsline {section}{\numberline {4.3}3D Model Reconstruction}{8}{section.4.3}% 
+\contentsline {subsection}{\numberline {4.3.1}Normal Map to Point Cloud}{8}{subsection.4.3.1}% 
+\contentsline {subsubsection}{Global Least Squares}{8}{section*.7}% 
+\contentsline {subsubsection}{Multigrid Method}{8}{section*.8}% 
+\contentsline {subsection}{\numberline {4.3.2}Point Cloud Registration}{8}{subsection.4.3.2}% 
+\contentsline {paragraph}{Manual Registration}{9}{section*.9}% 
+\contentsline {paragraph}{Automatic Global Registration}{9}{section*.10}% 
+\contentsline {subsection}{\numberline {4.3.3}Point Cloud Cleaning}{9}{subsection.4.3.3}% 
+\contentsline {subsection}{\numberline {4.3.4}Results}{9}{subsection.4.3.4}% 
+\contentsline {subsection}{\numberline {4.3.5}Discussion}{9}{subsection.4.3.5}% 
+\contentsline {chapter}{\numberline {5}Analysis}{11}{chapter.5}% 
+\contentsline {chapter}{\numberline {6}Conclusion}{13}{chapter.6}% 
+\contentsline {chapter}{\numberline {A}Example Appendix Chapter}{15}{appendix.A}% 
