@@ -7,10 +7,10 @@ normalFolder = 'E:\Scratch\temp\Normals';
 ambientFolder = 'E:\Scratch\temp\Ambients';
 
 % Define output directories
-outputFolder = 'E:\Scratch\temp\Outputs';
-outHeightDir = fullfile(outputFolder,'04_Heightmaps');
-outFullPointDir = fullfile(outputFolder,'05_Full_Resolution_PointClouds');
-outSubPointDir = fullfile(outputFolder,'06_SubSampled_PointClouds');
+outputFolder = 'E:\Scratch\temp\Outputs\04_NUV';
+outHeightDir = fullfile(outputFolder,'00_Heightmaps');
+outFullPointDir = fullfile(outputFolder,'01_Full_Resolution_PointClouds');
+outSubPointDir = fullfile(outputFolder,'02_SubSampled_PointClouds');
 % Spacing between pixels
 pixelSpacing = 1;
 
@@ -149,7 +149,7 @@ parfor i = 1:n_norms
     if createHeightMap
         Z = out_Z{i} - min(minZ(i));
         Z = uint16(Z * floor(2^16 / maxZ(i)));
-        file_heightmap = [outHeightDir, name, '.png'];
+        file_heightmap = fullfile(outHeightDir, [name, '.png']);
         imwrite(Z, file_heightmap, 'BitDepth', 16);
     end
 end

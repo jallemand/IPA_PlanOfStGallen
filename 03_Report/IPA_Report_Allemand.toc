@@ -36,4 +36,3 @@
 \contentsline {chapter}{\numberline {5}Analysis}{11}{chapter.5}% 
 \contentsline {chapter}{\numberline {6}Conclusion}{13}{chapter.6}% 
 \contentsline {chapter}{\numberline {A}Example Appendix Chapter}{15}{appendix.A}% 
-\contentsline {chapter}{Bibliography}{19}{appendix*.11}% 
