@@ -19,15 +19,15 @@
 \contentsline {section}{\numberline {4.2}Image Stitching}{7}{section.4.2}% 
 \contentsline {subsection}{\numberline {4.2.1}Hugin}{7}{subsection.4.2.1}% 
 \contentsline {subsection}{\numberline {4.2.2}Photoshop}{7}{subsection.4.2.2}% 
-\contentsline {subsection}{\numberline {4.2.3}OpenCV}{7}{subsection.4.2.3}% 
-\contentsline {subsection}{\numberline {4.2.4}ICE}{7}{subsection.4.2.4}% 
+\contentsline {subsection}{\numberline {4.2.3}OpenCV}{8}{subsection.4.2.3}% 
+\contentsline {subsection}{\numberline {4.2.4}ICE}{8}{subsection.4.2.4}% 
 \contentsline {subsection}{\numberline {4.2.5}Results}{8}{subsection.4.2.5}% 
 \contentsline {subsection}{\numberline {4.2.6}Discussion}{8}{subsection.4.2.6}% 
 \contentsline {section}{\numberline {4.3}3D Model Reconstruction}{8}{section.4.3}% 
 \contentsline {subsection}{\numberline {4.3.1}Normal Map to Point Cloud}{8}{subsection.4.3.1}% 
 \contentsline {subsubsection}{Global Least Squares}{8}{section*.7}% 
-\contentsline {subsubsection}{Multigrid Method}{8}{section*.8}% 
-\contentsline {subsection}{\numberline {4.3.2}Point Cloud Registration}{8}{subsection.4.3.2}% 
+\contentsline {subsubsection}{Multigrid Method}{9}{section*.8}% 
+\contentsline {subsection}{\numberline {4.3.2}Point Cloud Registration}{9}{subsection.4.3.2}% 
 \contentsline {paragraph}{Manual Registration}{9}{section*.9}% 
 \contentsline {paragraph}{Automatic Global Registration}{9}{section*.10}% 
 \contentsline {subsection}{\numberline {4.3.3}Point Cloud Cleaning}{9}{subsection.4.3.3}% 
@@ -36,4 +36,4 @@
 \contentsline {chapter}{\numberline {5}Analysis}{11}{chapter.5}% 
 \contentsline {chapter}{\numberline {6}Conclusion}{13}{chapter.6}% 
 \contentsline {chapter}{\numberline {A}Example Appendix Chapter}{15}{appendix.A}% 
-\contentsline {chapter}{Bibliography}{19}{appendix*.11}% 
+\contentsline {chapter}{Bibliography}{17}{appendix*.11}% 

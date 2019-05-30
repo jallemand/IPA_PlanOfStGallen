@@ -1,0 +1,29 @@
+% !TeX spellcheck = en_GB
+% !TeX encoding = UTF-8
+% !TeX root = ../report.tex
+
+\chapter{Plan Stitching}
+\label{chp:MosaicStitchingChapter}
+
+\section{Introduction}
+\label{sec:Introduction}
+The key task of this project was to ensure a full digital representation fo the Plan was created through the combination of the individual patches acquired through the photometric stereo survey. The combination of the Plan patches consisted of two separate processes although in each had other unique intermediate outputs that could be used for further analysis.
+
+The first process consisted of mosaicing or stitching together the individual normal, ambient and albedo patches. By doing this, a full comprehensive view of the individual outputs from the MiniDome could be viewed with respect to the rest of the plan. By doing so, a full, visually appealing, high resolution representation of the plan is produced that can be viewed easily by any interested parties. Additionally, the full size outputs provide context and location for local features with respect to the whole Plan whilst still maintaining the ability to visualise fine details. \Cref{sec:ImageStitching} will discuss in detail the different software implemented for this as well as the considerations, pros and cons of each one for this task.
+
+The second part was to create a proper 3D model of the Plan by an integration process of the normal maps. The approaches taken to do so are presented in \cref{sec:ModelReconstruction} with an outline of all processing steps and outputs shown in 
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1\textwidth]{img/StitchingDataProcessingWorkflow.png}
+	\caption{Overview of processing performed on the MiniDome data during the stitching segment.}
+	\label{fig:StitchingWorkflow}
+\end{figure}
+	
+
+\input{chapters/imageStitching}
+
+
+\input{chapters/modelReconstruction}
+
+

@@ -5,6 +5,10 @@
 % !TeX TXS-program:quick = txs:///compile | txs:///view
 
 \documentclass[ipa,teamwork]{docstyle/IDSCreport}
+\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\newline\indent}
+\usepackage{subcaption}
+
+\setlength{\parindent}{1cm}
 
 \title{Title}
 \subtitle{Subtitle}
@@ -24,26 +28,25 @@
 \bibliography{bibliography}
 
 \begin{abstract}
-The start of the painting of the Plan of Saint Gall was in 16xx and afterwards, new parts were added. Due to the lifetime and the painting the plan gets some “injuries”. To detect traces of the past, the Plan was recorded with the best measurement system nowadays, the Minidome, which allows to measure with mm-submilitre resolution and in 2.5D. 
+The start of the painting of the Plan of Saint Gall was in 16xx and afterwards, new parts were added. Due to the lifetime and the painting the plan gets some “injuries”. To detect traces of the past, the Plan was recorded with the best measurement system nowadays, the Minidome, which allows to measure with mm-submilitre resolution and in 2.5D.
 
-To subtract some information from the Plan, firstly, the patches recording have to be stitched together. This steps have to be done because the portable Minidome can only record patches of a size of x X x cm and the Plan has a totally size of  x m. For the extracting of research features, ideas have to build up which should work on an old, crumbled plan. These detected features will be afterwards analysed from plan experts. 
+To subtract some information from the Plan, firstly, the patches recording have to be stitched together. This steps have to be done because the portable Minidome can only record patches of a size of x X x cm and the Plan has a totally size of  x m. For the extracting of research features, ideas have to build up which should work on an old, crumbled plan. These detected features will be afterwards analysed from plan experts.
 To prepare information for the experts, the plan was stitched together with Photoshop because all other program reached their limits with the given 1.5 TB dataset. The key point in this step was to get the transform parameters for each patch. After a lot of tries, Finally, a self-written C++ script solved the program. The second challenge, extracting research features like needle holes and scratches, can be only solved with manual detecting because the crumbled old plan destroyed all the genius, theoretical ideas for detecting. For examples, the made assumption that needle holes should be round and have some height differences are logical, but the circle matching program gave a lots of more possible circles which lays in wrinkled regions.\\
 \end{abstract}
 
 \begin{acknowledgement}
-\noindent We would like to sincerely thank Professor Schindler, because he made possible an extraordinary project that brought together our acquired technical knowledge and a cultural asset. In addition, for the simple, but still very good care. Furthermore, we sincerely thank the whole Stiftsbibliothek of St. Gall, who received us a very warm welcome and a great confidence to work with the unique plan. Very big help was the Abbey librarian Cornel x, who made all the impossible things possible, and Silvio y, who was always available for our questions and made the whole measuring process possible. Finally, we thank the Belgium team from Leuven, Vincent e and c.c, who made the recording with their brought minidome. 
+\noindent We would like to sincerely thank Professor Schindler, because he made possible an extraordinary project that brought together our acquired technical knowledge and a cultural asset. In addition, for the simple, but still very good care. Furthermore, we sincerely thank the whole Stiftsbibliothek of St. Gall, who received us a very warm welcome and a great confidence to work with the unique plan. Very big help was the Abbey librarian Cornel x, who made all the impossible things possible, and Silvio y, who was always available for our questions and made the whole measuring process possible. Finally, we thank the Belgium team from Leuven, Vincent e and c.c, who made the recording with their brought minidome.
 \end{acknowledgement}
 
 \begin{document}
 \input{chapters/introduction}
 \input{chapters/photometricSurvey}
 \input{chapters/featureExtraction}
-\input{chapters/mosaicStitching}
-
+\input{chapters/planStitching}
 \input{chapters/analysis}
 \input{chapters/conclusion}
 
-\appendix
+\appendix{}
 \input{chapters/appendix}
 
 \end{document}

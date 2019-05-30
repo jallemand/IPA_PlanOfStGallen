@@ -1,0 +1,66 @@
+% !TeX spellcheck = en_GB
+% !TeX encoding = UTF-8
+% !TeX root = mosaicStitching.tex
+
+\section{3D Model Reconstruction}
+\label{sec:ModelReconstruction}
+
+\subsection{Normal Map to Point Cloud}
+\label{sec:Normal2Pts}
+Normal maps, or gradient fields, are an approximation of an objects surface normal vector for the area covered by the pixel in the image. The normal vector doesn't provide any direct information about the height of the objects surface but it does provide the directional change in height - proportional to the width of a pixel.
+
+By knowing these height difference across the discretised pixels, it is possible to determine a height for each pixel via integration of the discretised field. A simplistic approach of picking one pixel as the reference point and then performing line- or path-integrations across the normal map is a simple solution but often performs poorly as they are susceptible to discontinuities and noise. Improvements can be made via taking averages over multiple paths, this greatly increases the processing cost but still performs worse than other methods. Further methods aim to improve the overall solution through the likes of error minimisation such as global least squares or multigrid methods \cite{SaracchiniEtAl2012}.
+
+For this project, two methods of integration were tested A global least squares method was implemented using that proposed by \cite{HarkerLeary2008} in code developed by \cite{HarkerLeary2013a} . The second method was through a multigrid method implemented by ESAT at Leuven. When performing the global least squares method, the multigrid implementation by ESAT was not known.
+
+\subsubsection{Global Least Squares}
+\label{sec:GlobalLeastSquares}
+The global least squares method aims to be an improvement on a typical line integration by obtaining a unique solution. The implementation used by \cite{HarkerLeary2008} in their grad2surf() functions does .....
+
+As you can see in the Figure X, the result performs OK for a single patch. The native output from this algorithm though causes the horizontal plane that the plan rested on to be set at a distinct angle. To correct this, a simple Least Squares fit to the plane was determined and the points reprojected onto an XY plane such that the height component determined from the global integration process is represented in the Z axis. An example of the final output can be seen in Figure X.
+
+\subsubsection{Multigrid Method}
+\label{sec:MultigridMethod}
+The multigrid methods aim .....
+
+\subsection{Point Cloud Registration}
+\label{sec:PointCloudRegistration}
+Creation of the full plan with the individual patches requires a transformation of all their local coordinate systems into a global system. To do so a registration process was implemented to determine the corresponding transformations of the patches to their location within the global reference system and the full plan. The following process was all performed within Geomagic Control 2015.
+
+\paragraph{Manual Registration}
+The full resolution patches were too large to be practical for a manual registration process so a set of subsampled patches at 1/4 resolution were used to determine the individual transformations. Once these patches were scaled to the corresct dimensions of the full resolution patches, an manual iterative approach registration was performed.
+
+First a central patch of the plan was taken as the starting reference point and then the neighbouring patches that overlapped significantly were registered to it. This involved manually identifying visual features on the Plan in each of the two point clouds that would be used to determine the approximate transformation parameters of the patches.
+
+After these were aligned to the central patch, their subsequent neighbours were registered with respect to themselves. This was continued outwards towards the Plan's edge until all patches were aligned in the global reference system. Due to the manual feature selection, the process was rather slow but effective in providing a starting approximation of the transformation parameters between the patches.
+
+\paragraph{Automatic Global Registration}
+With the manual registration complete, the. This global adjustment took a subsample of points from each of the patches and tried to minimise the RMS errors between neighbouring points within the overlapping regions. This global registration should provide an improvement of the patch alignments due to the minimal number of manual points used for the inital approximate registration.
+
+\subsection{Point Cloud Cleaning}
+\label{sec:PointCloudCleaning}
+Once all the patches were aligned as best as possible using the global registration, this provided a full set of transformation matrices that could be applied to the corresponding full resolution patches. These transformation parameters can be saved to a file for all patches in the Plan, allowing a few of the full resolutions patches to be loaded at a time and transformed to their corresponding locations determined from the global registration.
+
+As the quality of the globally registered patches was not as good as desired, the clipping or clipping along the overlap seams was only performed on the subsampled patches for ease and representative results. A central most patch was chosen and then then a seam was manually selected based on continuity of visual features as well as intersections of overlapping patches. All neighbouring patch points that overlapped within the region selected were deleted whilst all the external points of the patch of interested were deleted. This was performed at a top down perspective so that no overlapping points should remain and no gaps arise within the XY plane. 
+
+This was repeated, starting from the center and working all the way to the edges until all seams were cut along and additional overlapping points removed in the attempt to make the smoothest transitions between points. The results obtained from the subsampled cleaning are shown in \cref{sec:ResultsRegisteredPointClouds}.
+
+\subsection{Full Plan Point Clouds}
+\label{sec:ResultsFullPlanPtClouds}
+The ESAT multigrid method for creating 3D objects from normal maps was successfully adapted to function on imagery of the size generated for the full Plans generated in \cref{sec:ImageStitching}. This enabled the creationg of a single point cloud without the need for the whole registration process and the errors that arise from it. Performing the integration over the full Plan ensures there are no discontinuities within the model as well as minimises the number of points used in the final model. The results for this are shown in \cref{sec:IntegratedPointCloud}.
+
+\subsection{Results}
+\label{sec:ResultsPtClouds}
+
+	\subsubsection{Normal Maps to Point Clouds}
+	\label{sec:Normal2PtsResults}
+	
+	\subsubsection{Final Registered Point Cloud}
+	\label{sec:RegisteredPointCloud}
+	
+	\subsubsection{Final Point Cloud from Full Plan Normal Map}
+	\label{sec:IntegratedPointCloud}
+
+
+\subsection{Discussion}
+\label{sec:DiscussionPtClouds}

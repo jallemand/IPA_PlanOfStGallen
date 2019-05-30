@@ -21,6 +21,19 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{Hugin2019}
+\BIBentryALTinterwordspacing
+(2019, May) \BIBforeignlanguage{English}{Hugin - panorama photo stitcher}. -.
+  [Online]. Available: \url{http://hugin.sourceforge.net/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{OpenCV2019}
+\BIBentryALTinterwordspacing
+(2019, May) \BIBforeignlanguage{English}{Opencv: High level stitching api
+  (stitcher class)}. OpenCV. [Online]. Available:
+  \url{https://docs.opencv.org/4.1.0/d8/d19/tutorial_stitcher.html}
+\BIBentrySTDinterwordspacing
+
 \bibitem{SaracchiniEtAl2012}
 R.~F. Saracchini, J.~Stolfi, H.~C. Leitao, G.~A. Atkinson, and M.~L. Smith,
   ``\BIBforeignlanguage{english}{A robust multi-scale integration method to
