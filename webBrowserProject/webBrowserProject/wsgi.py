@@ -1,5 +1,5 @@
 """
-WSGI config for klosterPlan project.
+WSGI config for webBrowserProject project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "klosterPlan.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "webBrowserProject.settings")
 
 application = get_wsgi_application()
